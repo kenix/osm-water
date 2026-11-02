@@ -1,0 +1,91 @@
+{
+ "release": "water-2026-11-02",
+ "format": 1,
+ "base": "https://github.com/kenix/osm-water/releases/download/water-2026-11-02/",
+ "licence": "ODbL-1.0",
+ "attribution": "© OpenStreetMap contributors",
+ "orient": {
+  "file": "orient.json.gz",
+  "bytes": 42793,
+  "licence": "public domain (Natural Earth)"
+ },
+ "waters": {
+  "zuerichsee": {
+   "title": "Lake Zurich",
+   "bbox": [
+    8.5,
+    47.15,
+    9.05,
+    47.4
+   ],
+   "depth": true,
+   "bytes": 269183
+  },
+  "greifensee": {
+   "title": "Greifensee",
+   "bbox": [
+    8.62,
+    47.32,
+    8.74,
+    47.39
+   ],
+   "depth": false,
+   "bytes": 14391
+  },
+  "vierwaldstaettersee": {
+   "title": "Lake Lucerne",
+   "bbox": [
+    8.2,
+    46.89,
+    8.66,
+    47.1
+   ],
+   "depth": true,
+   "bytes": 424054
+  },
+  "thunersee": {
+   "title": "Lake Thun",
+   "bbox": [
+    7.58,
+    46.62,
+    7.92,
+    46.79
+   ],
+   "depth": true,
+   "bytes": 169362
+  },
+  "rhein_schaffhausen": {
+   "title": "Rhine: Stein am Rhein to Rheinfall",
+   "bbox": [
+    8.58,
+    47.64,
+    8.88,
+    47.72
+   ],
+   "depth": false,
+   "bytes": 25522
+  },
+  "donau_ulm": {
+   "title": "Danube: Ulm",
+   "bbox": [
+    9.9,
+    48.36,
+    10.12,
+    48.43
+   ],
+   "depth": false,
+   "bytes": 17408
+  },
+  "main_frankfurt": {
+   "title": "Main: Frankfurt",
+   "bbox": [
+    8.52,
+    50.07,
+    8.82,
+    50.14
+   ],
+   "depth": false,
+   "bytes": 27311
+  }
+ }
+}

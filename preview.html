@@ -1,0 +1,239 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Water preview</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+  html, body { margin: 0; height: 100%; font: 14px -apple-system, system-ui, sans-serif; color: #10181E; background: #fff; }
+  header { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; padding: 8px 16px; border-bottom: 1px solid #e3e6e9; }
+  header label { display: flex; gap: 6px; align-items: center; color: #4a5560; }
+  header label.off { opacity: 0.4; }
+  select { font: inherit; font-weight: 600; }
+  main { display: flex; height: calc(100% - 45px); }
+  .pane { flex: 1; position: relative; }
+  .pane + .pane { border-left: 2px solid #fff; }
+  .tag { position: absolute; z-index: 1000; top: 10px; left: 50%; transform: translateX(-50%); background: #10181Ecc; color: #fff; padding: 3px 10px; border-radius: 12px; font-size: 12px; pointer-events: none; }
+  .map { position: absolute; inset: 0; }
+  @media (max-width: 760px) { main { flex-direction: column; } .pane + .pane { border-left: 0; border-top: 2px solid #fff; } }
+
+  #water { background: #F3F1EC; }
+  .legend { background: #fffffff0; padding: 8px 10px; border-radius: 8px; box-shadow: 0 1px 4px #0003; font-size: 12px; line-height: 1.7; color: #2B3A44; }
+  .legend .rows > div { display: flex; align-items: center; gap: 8px; }
+  .legend .opt { color: #7a8590; }
+  .legend button { all: unset; cursor: pointer; display: flex; align-items: center; gap: 6px; font-weight: 600; color: #1F5F8C; }
+  .legend button i { font: italic 700 12px Georgia, serif; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; border: 1.5px solid currentColor; }
+  .legend.closed .rows { display: none; }
+  .legend .rows { margin-top: 4px; }
+  [hidden] { display: none !important; }
+  .mk span { position: absolute; white-space: nowrap; line-height: 1.25; }
+  .lbl { text-shadow: 0 0 2px #F3F1EC, 0 0 3px #F3F1EC, 0 0 4px #F3F1EC; }
+  .lbl.town, .lbl.city { font-size: 13px; font-weight: 600; color: #2B3A44; }
+  .lbl.village { font-size: 11.5px; color: #4a5560; }
+  .lbl.island, .lbl.islet, .lbl.peninsula, .lbl.cape, .lbl.bay { font-size: 12px; font-style: italic; color: #1F5F8C; text-shadow: 0 0 2px #CFE5F5, 0 0 3px #CFE5F5, 0 0 4px #CFE5F5; }
+  .pin { font-size: 11px; color: #1F5F8C; text-shadow: 0 0 2px #fff, 0 0 3px #fff; }
+  .pin i { position: absolute; left: -5px; top: -5px; width: 7px; height: 7px; border-radius: 50%; background: #1F5F8C; border: 1.5px solid #fff; }
+  .pin.rowing { color: #7A1620; } .pin.rowing i { left: -6px; top: -6px; width: 12px; height: 12px; background: none; border: 0; }
+  .pin svg { display: block; width: 100%; height: 100%; }
+  .pin.home { font-weight: 700; } .pin.home i { left: -8px; top: -8px; width: 16px; height: 16px; }
+  .legend svg { flex: none; }
+</style>
+<header>
+  <select id="lake"></select>
+  <label><input type="checkbox" id="ferry"> ferry routes</label>
+  <label><input type="checkbox" id="buoys"> buoys, lights, signs</label>
+  <label id="greyLabel"><input type="checkbox" id="grey" checked> grey swisstopo background</label>
+</header>
+<main>
+  <div class="pane"><div class="tag" id="topoTag">Now: swisstopo national map</div><div id="topo" class="map"></div></div>
+  <div class="pane"><div class="tag">Water focus</div><div id="water" class="map"></div></div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+// slug: [title, centre, zoom, inside Switzerland]
+const LAKES = {
+  zuerichsee: ['Lake Zurich', [47.234, 8.679], 13, true],
+  greifensee: ['Greifensee', [47.345, 8.68], 13, true],
+  vierwaldstaettersee: ['Lake Lucerne', [46.99, 8.48], 11, true],
+  thunersee: ['Lake Thun', [46.69, 7.72], 12, true],
+  rhein_schaffhausen: ['Rhine: Stein am Rhein to Rheinfall', [47.682, 8.735], 12, true],
+  donau_ulm: ['Danube: Ulm', [48.395, 10.0], 13, false],
+  main_frankfurt: ['Main: Frankfurt', [50.105, 8.67], 13, false],
+};
+const HOME = 'Seeclub Wädenswil';
+const wmts = id => `https://wmts.geo.admin.ch/1.0.0/${id}/default/current/3857/{z}/{x}/{y}.jpeg`;
+
+// category: [legend label, swatch kind, style, optional toggle]
+const STYLE = {
+  'reed': ['reeds', 'fill', { color: '#6E9F5E', weight: 0.6, fillColor: '#A9CF95', fillOpacity: 0.75 }],
+  'shoal': ['shallows', 'fill', { color: '#9A7B4F', weight: 0.8, dashArray: '2 2', fillColor: '#C9B48A', fillOpacity: 0.45 }],
+  'no entry': ['no entry', 'fill', { color: '#C8323C', weight: 1.2, fillColor: '#C8323C', fillOpacity: 0.18 }],
+  'speed zone': ['speed limit zone', 'line', { color: '#E07A3A', weight: 1, dashArray: '6 4', fillOpacity: 0 }],
+  'bathing': ['bathing area', 'fill', { color: '#C9962A', weight: 1, fillColor: '#E0B13A', fillOpacity: 0.25 }],
+  'protected area': ['nature reserve', 'line', { color: '#5BAA4A', weight: 1, dashArray: '4 3', fillOpacity: 0 }],
+  'pier/breakwater': ['pier, breakwater', 'fill', { color: '#4a5560', weight: 2, fillColor: '#4a5560', fillOpacity: 0.9 }],
+  'harbour/slipway/mooring': ['harbour', 'fill', { color: '#1F5F8C', weight: 0.8, dashArray: '3 3', fillColor: '#1F5F8C', fillOpacity: 0.06 }],
+  'river': ['river', 'line', { color: '#2F8AC4', weight: 2 }],
+  'weir': ['weir, dam, waterfall', 'line', { color: '#C8323C', weight: 3.5, radius: 4, fillOpacity: 0.9 }],
+  'lock': ['lock', 'fill', { color: '#123F66', weight: 1, radius: 3, fillColor: '#7FA8C9', fillOpacity: 0.7 }],
+  'rapids': ['rapids', 'line', { color: '#C8323C', weight: 3, dashArray: '2 3' }],
+  'bridge': ['bridge', 'fill', { color: '#6b7680', weight: 0.8, fillColor: '#c4c9ce', fillOpacity: 0.9 }],
+  'river km': ['river km', 'dot', { color: '#123F66', weight: 1, fillOpacity: 0.9 }],
+  'other water': [null, 'fill', { color: '#2F8AC4', weight: 0.6, fillColor: '#CFE5F5', fillOpacity: 1 }],
+  'depth': [null, 'fill', { color: '#2F8AC4', weight: 0.6, fillColor: '#CFE5F5', fillOpacity: 1 }],
+  'ferry route': ['ferry route', 'line', { color: '#123F66', weight: 1.4, dashArray: '8 5', opacity: 0.8 }, 'ferry'],
+  'seamark light': ['light', 'dot', { color: '#C8323C', weight: 1, fillOpacity: 0.9 }, 'buoys'],
+  'seamark buoy': ['buoy', 'dot', { color: '#E0A020', weight: 1, fillOpacity: 0.9 }, 'buoys'],
+  'seamark beacon': ['beacon', 'dot', { color: '#4a5560', weight: 1, fillOpacity: 0.9 }, 'buoys'],
+  'seamark other': ['sign, mooring, other mark', 'dot', { color: '#4a5560', weight: 1, fillOpacity: 0.9 }, 'buoys'],
+};
+const DEPTH_LINE = { color: '#2F8AC4', weight: 0.7, opacity: 0.6 };
+
+const topo = L.map('topo', { zoomSnap: 0.5 });
+const farbe = L.tileLayer(wmts('ch.swisstopo.pixelkarte-farbe'), { maxZoom: 19, maxNativeZoom: 18, attribution: '© swisstopo' });
+// ponytail: comparison only, outside CH; the app itself never loads OSM tiles
+const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap contributors' });
+const water = L.map('water', { zoomSnap: 0.5 });
+water.attributionControl.addAttribution('© OpenStreetMap contributors');
+const grey = L.tileLayer(wmts('ch.swisstopo.pixelkarte-grau'), { maxZoom: 19, maxNativeZoom: 18, opacity: 0.35, attribution: '© swisstopo' });
+
+// rowing club: crossed oars on a burgundy badge, so it never reads as a red light
+const OARS_BODY = '<rect x=".5" y=".5" width="11" height="11" rx="3" fill="#7A1620" stroke="#fff"/>'
+  + '<path d="M3 9.5 7.6 4.9M9 9.5 4.4 4.9" stroke="#fff" stroke-width="1.1" stroke-linecap="round"/>'
+  + '<path d="M7.6 4.9 9.3 3.2M4.4 4.9 2.7 3.2" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>';
+const OARS = `<svg viewBox="0 0 12 12">${OARS_BODY}</svg>`;
+const swatch = (kind, s) => {
+  if (kind === 'oars') return `<svg width="22" height="14" viewBox="-5 -1 22 14">${OARS_BODY}</svg>`;
+  const dash = s.dashArray ? ` stroke-dasharray="${s.dashArray}"` : '';
+  const body = kind === 'dot' ? `<circle cx="11" cy="6" r="3.5" fill="${s.color}" stroke="#fff"/>`
+    : kind === 'line' ? `<line x1="1" y1="6" x2="21" y2="6" stroke="${s.color}" stroke-width="${Math.max(s.weight, 1.5)}"${dash}/>`
+    : `<rect x="1" y="1" width="20" height="10" rx="2" fill="${s.fillColor}" fill-opacity="${s.fillOpacity}" stroke="${s.color}"${dash}/>`;
+  return `<svg width="22" height="12">${body}</svg>`;
+};
+const legend = L.control({ position: 'bottomright' });
+legend.onAdd = () => {
+  const el = L.DomUtil.create('div', 'legend closed');
+  el.innerHTML = '<button type="button" aria-expanded="false"><i>i</i>Legend</button><div class="rows"></div>';
+  const b = el.querySelector('button');
+  b.onclick = () => b.setAttribute('aria-expanded', !el.classList.toggle('closed'));
+  L.DomEvent.disableClickPropagation(el);
+  return el;
+};
+legend.addTo(water);
+// only what this water holds
+const fillLegend = d => {
+  const cs = new Set(d.detail.features.map(f => f.properties.c)), ks = new Set(d.marks.map(m => m.k));
+  const rows = [['water', 'fill', { color: '#2F8AC4', fillColor: '#CFE5F5', fillOpacity: 1 }],
+    ...(ks.has('rowing') ? [['rowing club', 'oars']] : []),
+    ...(ks.has('ferry') ? [['ferry stop', 'dot', { color: '#1F5F8C' }]] : []),
+    ...(d.depth.features.length ? [['depth line', 'line', DEPTH_LINE]] : []),
+    ...Object.entries(STYLE).filter(([c, [label]]) => label && cs.has(c)).map(([, row]) => row)];
+  legend.getContainer().querySelector('.rows').innerHTML = rows.map(([label, kind, s, opt]) => `<div class="${opt ? 'opt' : ''}">${swatch(kind, s)}${label}${opt ? ' (toggle)' : ''}</div>`).join('');
+};
+
+const tip = p => [p.name, p.c, p.description, p.distance && `km ${p.distance}`, p.maxspeed && `${p.maxspeed} km/h`, p['seamark:type']].filter(Boolean).join(' · ');
+const geo = feats => L.geoJSON({ type: 'FeatureCollection', features: feats }, {
+  style: f => STYLE[f.properties.c][2],
+  pointToLayer: (f, at) => L.circleMarker(at, { radius: 2.5, ...STYLE[f.properties.c][2], weight: 1 }),
+  onEachFeature: (f, l) => l.bindTooltip(tip(f.properties), { sticky: true }),
+});
+
+let base = L.layerGroup().addTo(water);
+const optional = { ferry: L.layerGroup(), buoys: L.layerGroup() };
+const marks = L.layerGroup();
+
+async function show(slug) {
+  const [title, centre, zoom, ch] = LAKES[slug];
+  // the browser does not unpack a plain .gz file itself
+  const d = await new Response((await fetch(`out/${slug}.json.gz`, { cache: 'no-store' })).body.pipeThrough(new DecompressionStream('gzip'))).json();
+  base.clearLayers(); marks.clearLayers(); Object.values(optional).forEach(g => g.clearLayers());
+  // a river comes in many adjacent polygons, and their outlines would draw seams across it
+  L.polygon(d.lake, { color: '#2F8AC4', weight: d.name === 'water' ? 0 : 1.2, fillColor: '#CFE5F5', fillOpacity: 1 }).addTo(base);
+  L.geoJSON(d.depth, { style: () => DEPTH_LINE, onEachFeature: (f, l) => l.bindTooltip(`${f.properties.depth} m`, { sticky: true }) }).addTo(base);
+  const feats = d.detail.features.filter(f => STYLE[f.properties.c]);
+  fillLegend(d);
+  geo(feats.filter(f => !STYLE[f.properties.c][3])).addTo(base);
+  for (const [key, group] of Object.entries(optional)) geo(feats.filter(f => STYLE[f.properties.c][3] === key)).addTo(group);
+  // markers get their elements only once the map has a view, and the labeller measures those
+  labels = []; lakeLL = d.lake;
+  water.setView(centre, zoom);
+  topo.setView(centre, zoom);
+  marks.addTo(water);
+  labels = d.marks.map(m => {
+    const pin = ['ferry', 'rowing'].includes(m.k), home = m.n === HOME;
+    const html = pin ? `<div class="pin ${m.k}${home ? ' home' : ''}"><i>${m.k === 'rowing' ? OARS : ''}</i><span>${m.n}</span></div>` : `<div class="lbl ${m.k}"><span>${m.n}</span></div>`;
+    const el = L.marker(m.p, { icon: L.divIcon({ html, className: 'mk', iconSize: null }), interactive: false }).addTo(marks).getElement();
+    const t = el.querySelector('span');
+    return { m, el, t, pin, home, w: t.offsetWidth, h: t.offsetHeight, prio: home ? -1 : PRIO.indexOf(m.k) };
+  }).sort((a, b) => a.prio - b.prio);
+  (ch ? osm : farbe).remove(); (ch ? farbe : osm).addTo(topo);
+  document.getElementById('topoTag').textContent = ch ? 'Now: swisstopo national map' : 'OpenStreetMap standard';
+  const g = document.getElementById('grey');
+  g.disabled = !ch; document.getElementById('greyLabel').classList.toggle('off', !ch);
+  ch && g.checked ? grey.addTo(water).bringToBack() : grey.remove();
+  document.title = `Water preview: ${title}`;
+  placeLabels();
+}
+
+// Labels: each takes the free spot around its point that covers the least water; one that fits nowhere hides.
+const PRIO = ['rowing', 'city', 'town', 'island', 'islet', 'peninsula', 'cape', 'village', 'bay', 'beach', 'ferry'];
+const DIRS = [[1, 0], [-1, 0], [0, -1], [0, 1], [1, -1], [1, 1], [-1, -1], [-1, 1]];
+const mask = document.createElement('canvas');
+let labels = [], lakeLL = [];
+function placeLabels() {
+  const { x: W, y: H } = water.getSize(), z = water.getZoom();
+  mask.width = W; mask.height = H;
+  const ctx = mask.getContext('2d', { willReadFrequently: true });
+  ctx.beginPath();
+  for (const ring of lakeLL.flat()) ring.forEach((ll, i) => { const p = water.latLngToContainerPoint(ll); i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y); });
+  ctx.fill('evenodd');
+  const px = ctx.getImageData(0, 0, W, H).data;
+  const wet = ([x, y, w, h]) => {  // share of the box over water, sampled every 3 px
+    let n = 0, hit = 0;
+    for (let yy = y; yy < y + h; yy += 3) for (let xx = x; xx < x + w; xx += 3, n++)
+      if (xx >= 0 && yy >= 0 && xx < W && yy < H && px[((yy | 0) * W + (xx | 0)) * 4 + 3]) hit++;
+    return hit / n;
+  };
+  const taken = [];
+  const free = ([x, y, w, h]) => !taken.some(([a, b, c, d]) => x < a + c + 2 && a < x + w + 2 && y < b + d + 2 && b < y + h + 2);
+  for (const l of labels) {
+    const p = water.latLngToContainerPoint(l.m.p), { w, h } = l;
+    const shown = l.home || (l.m.r === 1 ? z >= 11 : z >= 13);
+    l.el.hidden = !shown || p.x < -w || p.y < -h || p.x > W + w || p.y > H + h;
+    if (l.el.hidden) continue;
+    const r = l.home ? 8 : l.m.k === 'rowing' ? 6 : 5, dot = l.pin ? [p.x - r, p.y - r, 2 * r, 2 * r] : null;
+    // islands and bays sit on the water and stay centred; the rest try 8 sides, near then further out
+    const offs = ['island', 'islet', 'bay'].includes(l.m.k) ? [[-w / 2, -h / 2]]
+      : [...(l.pin ? [] : [[-w / 2, -h / 2]]), ...[l.pin ? r + 2 : 3, 18].flatMap(g => DIRS.map(([dx, dy]) =>
+          [dx > 0 ? g : dx < 0 ? -g - w : -w / 2, dy > 0 ? g - (dx ? h / 2 : 0) : dy < 0 ? -g - h + (dx ? h / 2 : 0) : -h / 2]))];
+    let best = null, cost = Infinity;
+    if (!dot || free(dot) || l.home)
+      offs.forEach(([ox, oy], i) => {
+        const box = [p.x + ox, p.y + oy, w, h];
+        if (!free(box) && !l.home) return;
+        const c = (['island', 'islet', 'bay'].includes(l.m.k) ? 0 : wet(box)) + i * 0.01;
+        if (c < cost) { cost = c; best = [ox, oy, box]; }
+      });
+    l.el.hidden = !best;
+    if (!best) continue;
+    l.t.style.left = `${best[0]}px`; l.t.style.top = `${best[1]}px`;
+    taken.push(best[2]); dot && taken.push(dot);
+  }
+}
+water.on('moveend', placeLabels);
+water.on('click', () => {
+  const el = legend.getContainer();
+  el.classList.add('closed'); el.querySelector('button').setAttribute('aria-expanded', false);
+});
+
+let busy = false;
+const sync = (a, b) => a.on('moveend', () => { if (busy) return; busy = true; b.setView(a.getCenter(), a.getZoom(), { animate: false }); busy = false; });
+sync(topo, water); sync(water, topo);
+
+const sel = document.getElementById('lake');
+sel.innerHTML = Object.entries(LAKES).map(([slug, [title]]) => `<option value="${slug}">${title}</option>`).join('');
+sel.onchange = () => show(sel.value);
+for (const key of Object.keys(optional))
+  document.getElementById(key).onchange = e => e.target.checked ? optional[key].addTo(water) : optional[key].remove();
+document.getElementById('grey').onchange = e => e.target.checked ? grey.addTo(water).bringToBack() : grey.remove();
+show(sel.value);
+</script>
