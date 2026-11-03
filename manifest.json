@@ -1,7 +1,7 @@
 {
- "release": "water-2026-11-02",
+ "release": "water-2026-11-03",
  "format": 1,
- "base": "https://github.com/kenix/osm-water/releases/download/water-2026-11-02/",
+ "base": "https://github.com/kenix/osm-water/releases/download/water-2026-11-03/",
  "licence": "ODbL-1.0",
  "attribution": "© OpenStreetMap contributors",
  "orient": {
@@ -19,7 +19,7 @@
     47.4
    ],
    "depth": true,
-   "bytes": 269183
+   "bytes": 265403
   },
   "greifensee": {
    "title": "Greifensee",
@@ -30,7 +30,7 @@
     47.39
    ],
    "depth": false,
-   "bytes": 14391
+   "bytes": 14285
   },
   "vierwaldstaettersee": {
    "title": "Lake Lucerne",
@@ -41,7 +41,7 @@
     47.1
    ],
    "depth": true,
-   "bytes": 424054
+   "bytes": 424043
   },
   "thunersee": {
    "title": "Lake Thun",
@@ -85,7 +85,7 @@
     50.14
    ],
    "depth": false,
-   "bytes": 27311
+   "bytes": 26148
   }
  }
 }

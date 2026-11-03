@@ -83,8 +83,11 @@ def relevant(g):
 def category(t):
     if t.get('route') == 'ferry': return 'ferry route'
     # restrictions before nature: a reserve tagged no_entry is a no-go zone first
-    if t.get('seamark:type') == 'restricted_area' or 'maxspeed' in t:  # maxspeed: the 300 m "Uferzone"
-        return 'no entry' if t.get('seamark:restricted_area:restriction') == 'no_entry' else 'speed zone'
+    if t.get('seamark:restricted_area:restriction') == 'no_entry': return 'no entry'
+    # A speed zone needs its speed (the 300 m "Uferzone"): a restricted_speed area without one is the
+    # open lake around the shore zone (Zürichsee), and maxspeed on a bridge is the road's (2026-11-03).
+    if 'maxspeed' in t and not ({'highway', 'bridge', 'railway', 'traffic_sign'} & t.keys()) and t.get('man_made') != 'bridge':
+        return 'speed zone'
     if t.get('man_made') in ('pier', 'breakwater', 'groyne'): return 'pier/breakwater'
     if t.get('man_made') == 'bridge': return 'bridge'
     if t.get('waterway') in ('weir', 'dam', 'waterfall'): return 'weir'
