@@ -1,4 +1,4 @@
-"""The waters rowing clubs are on, found from OSM: every sport=rowing object, the natural=water polygon
+"""The waters rowing clubs are on, found from OSM: every object whose sport list holds rowing, the natural=water polygon
 within 500 m of it, then one file per lake and one per stretch of river around a group of clubs.
 Usage: python3 -I survey.py <hand waters.txt> <out waters.txt> <cc>:<clubs>:<water>:<rivers> ... (osmium geojsonseq
 files: sport=rowing, natural=water polygons, waterway=river,canal lines for the stretches' names; ids are osmium's
@@ -163,8 +163,10 @@ def main():
                 lines_.append((name, g['coordinates']))
         river_names = {name for name, _ in lines_}
         for f in records(clubs_path):
-            if f.get('geometry'):
-                t = f['properties']
+            t = f['properties']
+            # sport is a ;-list (canoe;rowing); a gym's rowing machines are not a club
+            if (f.get('geometry') and 'rowing' in t.get('sport', '').split(';')
+                    and t.get('leisure') != 'fitness_centre' and t.get('amenity') != 'gym'):
                 clubs.append({'cc': cc, 'id': f.get('id'), 'name': t.get('name') or '', 'p': centre(f['geometry'])})
         cells = {}
         for i, c in enumerate(clubs):

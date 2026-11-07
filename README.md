@@ -15,7 +15,7 @@ history are in every clone for ever.
 | File | What it is |
 |---|---|
 | `waters.sh` | Fetches the sources and builds every file of a release into `out/`, then writes `manifest.json` |
-| `survey.py` | Every other water: the lake or river each `sport=rowing` object in OSM is on, one file per lake and per stretch of river around a group of clubs, into `generated.txt` |
+| `survey.py` | Every other water: the lake or river each object in OSM with `rowing` in its `sport` list is on, one file per lake and per stretch of river around a group of clubs, into `generated.txt` |
 | `lake.sh` | One water: OSM extract (`osmium-tool`), then the Python steps below |
 | `clip.py` | A river stretch: its `natural=water` polygons clipped to the bbox |
 | `measure.py` | The details on and around the water, by category |

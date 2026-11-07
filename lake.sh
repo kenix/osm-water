@@ -24,7 +24,7 @@ if [ -n "$river" ]; then
   name=water
 fi
 x marks n/place=town,city,village,island,islet w/place=island,islet r/place=island \
-  nwr/natural=cape,peninsula,bay,beach nwr/amenity=ferry_terminal nwr/sport=rowing
+  nwr/natural=cape,peninsula,bay,beach nwr/amenity=ferry_terminal nwr/sport
 x details nwr/man_made=pier,breakwater,groyne nwr/leisure=slipway,marina,bathing_place,swimming_area,nature_reserve \
   nwr/harbour nwr/mooring nwr/seamark:type nwr/route=ferry nwr/amenity=ferry_terminal \
   nwr/natural=shoal,reef,wetland${river:-,water} nwr/wetland nwr/boundary=protected_area nwr/waterway nwr/depth \

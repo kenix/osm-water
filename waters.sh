@@ -19,7 +19,7 @@ COUNTRIES=(
   "europe/great-britain gb" "europe/ireland-and-northern-ireland ie"
 )
 FILTER="nwr/natural=water,cape,peninsula,bay,beach,shoal,reef,wetland n/place=town,city,village,island,islet
-  w/place=island,islet r/place=island nwr/amenity=ferry_terminal nwr/sport=rowing
+  w/place=island,islet r/place=island nwr/amenity=ferry_terminal nwr/sport
   nwr/man_made=pier,breakwater,groyne,bridge nwr/leisure=slipway,marina,bathing_place,swimming_area,nature_reserve
   nwr/harbour nwr/mooring nwr/seamark:type nwr/route=ferry nwr/wetland nwr/boundary=protected_area nwr/waterway
   nwr/depth nwr/lock nwr/water=lock"
@@ -31,7 +31,7 @@ for c in "${COUNTRIES[@]}"; do
   f=src/filtered/$2.pbf
   [ $f -nt src/$(basename $1)-latest.osm.pbf ] || osmium tags-filter src/$(basename $1)-latest.osm.pbf $FILTER -o $f -O
   parts+=($f)
-  osmium tags-filter $f nwr/sport=rowing -o work/survey/$2-clubs.pbf -O
+  osmium tags-filter $f nwr/sport -o work/survey/$2-clubs.pbf -O
   osmium export work/survey/$2-clubs.pbf -u type_id -f geojsonseq -o work/survey/$2-clubs.geojsonseq -O
   osmium tags-filter $f nwr/natural=water -o work/survey/$2-water.pbf -O
   osmium export work/survey/$2-water.pbf -u type_id -f geojsonseq --geometry-types=polygon -o work/survey/$2-water.geojsonseq -O

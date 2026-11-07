@@ -87,7 +87,7 @@ for f in marks_fc['features']:
     if not name or f['geometry'] is None:
         continue
     kind = (t.get('place') or t.get('natural') or ('ferry' if t.get('amenity') == 'ferry_terminal' else None)
-            or ('rowing' if t.get('sport') == 'rowing' else None))
+            or ('rowing' if 'rowing' in t.get('sport', '').split(';') else None))
     if kind not in RULES:
         continue
     p = centre(f['geometry'])
