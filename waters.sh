@@ -23,8 +23,8 @@ FILTER="nwr/natural=water,cape,peninsula,bay,beach,shoal,reef,wetland n/place=to
   nwr/man_made=pier,breakwater,groyne,bridge nwr/leisure=slipway,marina,bathing_place,swimming_area,nature_reserve
   nwr/harbour nwr/mooring nwr/seamark:type nwr/route=ferry nwr/wetland nwr/boundary=protected_area nwr/waterway
   nwr/depth nwr/lock nwr/water=lock"
-mkdir -p src/filtered work/survey
-parts=() survey=()
+mkdir -p src/filtered work/survey work/coast
+parts=() survey=() coast=()
 for c in "${COUNTRIES[@]}"; do
   set -- $c
   get $GF_ROOT/$1-latest.osm.pbf src/$(basename $1)-latest.osm.pbf
@@ -37,6 +37,10 @@ for c in "${COUNTRIES[@]}"; do
   osmium export work/survey/$2-water.pbf -u type_id -f geojsonseq --geometry-types=polygon -o work/survey/$2-water.geojsonseq -O
   osmium tags-filter $f w/waterway=river,canal -o work/survey/$2-rivers.pbf -O
   osmium export work/survey/$2-rivers.pbf -f geojsonseq --geometry-types=linestring -o work/survey/$2-rivers.geojsonseq -O
+  c=work/coast/$2
+  [ $c.geojsonseq -nt src/$(basename $1)-latest.osm.pbf ] || { osmium tags-filter src/$(basename $1)-latest.osm.pbf w/natural=coastline -o $c.pbf -O
+    osmium export $c.pbf -f geojsonseq --geometry-types=linestring -o $c.geojsonseq -O; }
+  coast+=($c.geojsonseq)
   survey+=($2:work/survey/$2-clubs.geojsonseq:work/survey/$2-water.geojsonseq:work/survey/$2-rivers.geojsonseq)
 done
 # extracts taken on different days hold the same object at two versions; time-filter keeps today's
@@ -66,9 +70,8 @@ WATERS=(
 )
 printf '%s\n' "${WATERS[@]}" > work/hand.txt
 python3 -I survey.py work/hand.txt generated.txt "${survey[@]}"
-# the coastline as polygons (osmdata.openstreetmap.de, ODbL), for the clubs on the sea
-get https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip src/water-polygons-split-4326.zip
-python3 -I sea.py src/water-polygons-split-4326.zip generated.txt
+# the sea for the clubs on the coast, closed from the extracts' coastline ways
+python3 -I sea.py generated.txt "${coast[@]}"
 while IFS= read -r line; do WATERS+=("$line"); done < generated.txt
 one() {
   IFS='|' read -r slug name bbox bathy src title core <<< "$1"

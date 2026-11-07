@@ -258,3 +258,33 @@ ie_liffey|water=river,canal,oxbow,harbour|-6.472,53.253,-6.066,53.437|||Liffey|-
 ie_poulaphouca_reservoir|@id=a2415973|-6.588,53.086,-6.473,53.183|||Poulaphouca Reservoir|-6.588,53.086,-6.473,53.183
 ie_river_lee|water=river,canal,oxbow,harbour|-8.59,51.808,-8.266,51.992|||River Lee|-8.474,51.88,-8.382,51.92
 ie_shannon|water=river,canal,oxbow,harbour|-8.249,53.854,-7.944,54.035|||Shannon|-8.127,53.926,-8.066,53.962
+de_sea_eckernfoerder_ruderclub|sea|9.755,54.288,10.149,54.65|||Sea near Eckernförder Ruderclub|9.809,54.451,9.871,54.488
+de_sea_ruder_und_kanuzentrum_cau_kiel|sea|9.839,54.266,10.458,54.513|||Sea near Ruder- und Kanuzentrum CAU Kiel|10.117,54.31,10.181,54.35
+de_sea_ruderverein_wolgast|sea|13.483,53.876,14.095,54.238|||Sea near Ruderverein Wolgast|13.758,54.039,13.82,54.075
+gb_sea_bangor_university_rowing_club|sea|-4.45,53.046,-3.85,53.408|||Sea near Bangor University Rowing Club|-4.18,53.209,-4.12,53.245
+gb_sea_berwick_amateur_rowing_club|sea|-2.327,55.589,-1.688,55.951|||Sea near Berwick Amateur Rowing Club|-2.04,55.752,-1.976,55.788
+gb_sea_bexhill_rowing_club|sea|0.188,50.689,0.757,50.97|||Sea near Bexhill Rowing Club|0.444,50.819,0.501,50.855
+gb_sea_blyth_community_rowing_club|sea|-1.651,54.835,-1.242,55.306|||Sea near Blyth Community Rowing Club|-1.529,54.998,-1.387,55.143
+gb_sea_brixham_gig_rowing_club|sea|-3.787,50.219,-3.394,50.58|||Sea near Brixham Gig Rowing Club|-3.533,50.381,-3.477,50.418
+gb_sea_carrick_coastal_rowing_club|sea|-5.141,55.153,-4.541,55.514|||Sea near Carrick Coastal Rowing Club|-4.856,55.315,-4.793,55.352
+gb_sea_charlestown_rowing_club|sea|-5.039,50.152,-4.476,50.514|||Sea near Charlestown Rowing Club|-4.786,50.315,-4.729,50.351
+gb_sea_deben_rowing_club|sea|1.024,51.907,1.609,52.212|||Sea near Deben Rowing Club|1.287,52.07,1.346,52.106
+gb_sea_exmouth_rowing_club|sea|-3.669,50.432,-3.127,50.739|||Sea near Exmouth Rowing Club|-3.438,50.595,-3.382,50.631
+gb_sea_findhorn_coastal_rowing_skiff|sea|-3.948,57.541,-3.277,57.84|||Sea near Findhorn Coastal Rowing Skiff|-3.646,57.641,-3.579,57.677
+gb_sea_kinghorn_coastal_rowing_club|sea|-3.496,55.9,-2.852,56.25|||Sea near Kinghorn Coastal Rowing Club|-3.206,56.051,-3.142,56.087
+gb_sea_lerwick_boating_club|sea|-1.499,59.972,-0.814,60.334|||Sea near Lerwick Boating Club|-1.174,60.135,-1.102,60.171
+gb_sea_mounts_bay_pilot_gig_club|sea|-5.817,49.908,-5.196,50.305|||Sea near Mounts Bay Pilot Gig Club|-5.567,50.064,-5.448,50.142
+gb_sea_plymouth_amateur_rowing_club|sea|-4.388,50.198,-3.824,50.559|||Sea near Plymouth Amateur Rowing Club|-4.134,50.36,-4.078,50.397
+gb_sea_queenborough_rowing_club|sea|0.454,51.283,1.03,51.598|||Sea near Queenborough Rowing Club|0.713,51.399,0.771,51.436
+gb_sea_royal_west_of_scotland_amateur_boat_club|sea|-5.112,55.782,-4.47,56.144|||Sea near Royal West Of Scotland Amateur Boat Club|-4.823,55.945,-4.759,55.981
+gb_sea_saint_mary_s_gig_club|sea|-6.515,49.818,-6.173,50.028|||Sea near Saint Mary's Gig Club|-6.336,49.899,-6.281,49.935
+gb_sea_southsea_rowing_club|sea|-1.456,50.53,-0.814,50.933|||Sea near Southsea Rowing Club|-1.2,50.612,-1.07,50.802
+gb_sea_swanage_sea_rowing_club|sea|-2.236,50.531,-1.67,50.783|||Sea near Swanage Sea Rowing Club|-1.982,50.589,-1.925,50.625
+gb_sea_water|sea|0.813,51.223,1.388,51.553|||Sea near rowing club|1.072,51.354,1.129,51.39
+gb_sea_whitby_fishermens_amateur_rowing_club|sea|-0.922,54.307,-0.338,54.63|||Sea near Whitby Fishermens Amateur Rowing Club|-0.644,54.47,-0.582,54.506
+ie_sea_cairndhu_rowing_club|sea|-6.137,54.662,-5.487,55.073|||Sea near Cairndhu Rowing Club|-5.872,54.825,-5.769,54.91
+ie_sea_castletownshend_rowing_club|sea|-9.462,51.402,-8.884,51.709|||Sea near Castletownshend Rowing Club|-9.202,51.51,-9.144,51.546
+ie_sea_greystones_rowing_and_kayaking_club|sea|-6.284,52.969,-5.929,53.331|||Sea near Greystones Rowing and Kayaking Club|-6.094,53.132,-6.034,53.168
+ie_sea_kilmacsimon_rowing_club|sea|-8.925,51.554,-8.345,51.916|||Sea near Kilmacsimon Rowing Club|-8.664,51.717,-8.606,51.753
+ie_sea_overthewater_rowing|sea|-10.521,51.769,-9.938,52.131|||Sea near Overthewater Rowing|-10.259,51.932,-10.201,51.968
+ie_sea_passage_west_rowing_club|sea|-8.627,51.691,-8.045,51.957|||Sea near Passage West Rowing Club|-8.365,51.854,-8.307,51.891

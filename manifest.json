@@ -4506,6 +4506,516 @@
     -8.066,
     53.962
    ]
+  },
+  "de_sea_eckernfoerder_ruderclub": {
+   "title": "Sea near Eckernförder Ruderclub",
+   "bbox": [
+    9.755,
+    54.288,
+    10.149,
+    54.65
+   ],
+   "depth": false,
+   "bytes": 27101,
+   "core": [
+    9.809,
+    54.451,
+    9.871,
+    54.488
+   ]
+  },
+  "de_sea_ruder_und_kanuzentrum_cau_kiel": {
+   "title": "Sea near Ruder- und Kanuzentrum CAU Kiel",
+   "bbox": [
+    9.839,
+    54.266,
+    10.458,
+    54.513
+   ],
+   "depth": false,
+   "bytes": 71905,
+   "core": [
+    10.117,
+    54.31,
+    10.181,
+    54.35
+   ]
+  },
+  "de_sea_ruderverein_wolgast": {
+   "title": "Sea near Ruderverein Wolgast",
+   "bbox": [
+    13.483,
+    53.876,
+    14.095,
+    54.238
+   ],
+   "depth": false,
+   "bytes": 155740,
+   "core": [
+    13.758,
+    54.039,
+    13.82,
+    54.075
+   ]
+  },
+  "gb_sea_bangor_university_rowing_club": {
+   "title": "Sea near Bangor University Rowing Club",
+   "bbox": [
+    -4.45,
+    53.046,
+    -3.85,
+    53.408
+   ],
+   "depth": false,
+   "bytes": 99543,
+   "core": [
+    -4.18,
+    53.209,
+    -4.12,
+    53.245
+   ]
+  },
+  "gb_sea_berwick_amateur_rowing_club": {
+   "title": "Sea near Berwick Amateur Rowing Club",
+   "bbox": [
+    -2.327,
+    55.589,
+    -1.688,
+    55.951
+   ],
+   "depth": false,
+   "bytes": 65040,
+   "core": [
+    -2.04,
+    55.752,
+    -1.976,
+    55.788
+   ]
+  },
+  "gb_sea_bexhill_rowing_club": {
+   "title": "Sea near Bexhill Rowing Club",
+   "bbox": [
+    0.188,
+    50.689,
+    0.757,
+    50.97
+   ],
+   "depth": false,
+   "bytes": 42608,
+   "core": [
+    0.444,
+    50.819,
+    0.501,
+    50.855
+   ]
+  },
+  "gb_sea_blyth_community_rowing_club": {
+   "title": "Sea near Blyth Community Rowing Club",
+   "bbox": [
+    -1.651,
+    54.835,
+    -1.242,
+    55.306
+   ],
+   "depth": false,
+   "bytes": 57641,
+   "core": [
+    -1.529,
+    54.998,
+    -1.387,
+    55.143
+   ]
+  },
+  "gb_sea_brixham_gig_rowing_club": {
+   "title": "Sea near Brixham Gig Rowing Club",
+   "bbox": [
+    -3.787,
+    50.219,
+    -3.394,
+    50.58
+   ],
+   "depth": false,
+   "bytes": 95370,
+   "core": [
+    -3.533,
+    50.381,
+    -3.477,
+    50.418
+   ]
+  },
+  "gb_sea_carrick_coastal_rowing_club": {
+   "title": "Sea near Carrick Coastal Rowing Club",
+   "bbox": [
+    -5.141,
+    55.153,
+    -4.541,
+    55.514
+   ],
+   "depth": false,
+   "bytes": 35897,
+   "core": [
+    -4.856,
+    55.315,
+    -4.793,
+    55.352
+   ]
+  },
+  "gb_sea_charlestown_rowing_club": {
+   "title": "Sea near Charlestown Rowing Club",
+   "bbox": [
+    -5.039,
+    50.152,
+    -4.476,
+    50.514
+   ],
+   "depth": false,
+   "bytes": 128583,
+   "core": [
+    -4.786,
+    50.315,
+    -4.729,
+    50.351
+   ]
+  },
+  "gb_sea_deben_rowing_club": {
+   "title": "Sea near Deben Rowing Club",
+   "bbox": [
+    1.024,
+    51.907,
+    1.609,
+    52.212
+   ],
+   "depth": false,
+   "bytes": 200628,
+   "core": [
+    1.287,
+    52.07,
+    1.346,
+    52.106
+   ]
+  },
+  "gb_sea_exmouth_rowing_club": {
+   "title": "Sea near Exmouth Rowing Club",
+   "bbox": [
+    -3.669,
+    50.432,
+    -3.127,
+    50.739
+   ],
+   "depth": false,
+   "bytes": 155480,
+   "core": [
+    -3.438,
+    50.595,
+    -3.382,
+    50.631
+   ]
+  },
+  "gb_sea_findhorn_coastal_rowing_skiff": {
+   "title": "Sea near Findhorn Coastal Rowing Skiff",
+   "bbox": [
+    -3.948,
+    57.541,
+    -3.277,
+    57.84
+   ],
+   "depth": false,
+   "bytes": 36707,
+   "core": [
+    -3.646,
+    57.641,
+    -3.579,
+    57.677
+   ]
+  },
+  "gb_sea_kinghorn_coastal_rowing_club": {
+   "title": "Sea near Kinghorn Coastal Rowing Club",
+   "bbox": [
+    -3.496,
+    55.9,
+    -2.852,
+    56.25
+   ],
+   "depth": false,
+   "bytes": 70340,
+   "core": [
+    -3.206,
+    56.051,
+    -3.142,
+    56.087
+   ]
+  },
+  "gb_sea_lerwick_boating_club": {
+   "title": "Sea near Lerwick Boating Club",
+   "bbox": [
+    -1.499,
+    59.972,
+    -0.814,
+    60.334
+   ],
+   "depth": false,
+   "bytes": 176440,
+   "core": [
+    -1.174,
+    60.135,
+    -1.102,
+    60.171
+   ]
+  },
+  "gb_sea_mounts_bay_pilot_gig_club": {
+   "title": "Sea near Mounts Bay Pilot Gig Club",
+   "bbox": [
+    -5.817,
+    49.908,
+    -5.196,
+    50.305
+   ],
+   "depth": false,
+   "bytes": 170828,
+   "core": [
+    -5.567,
+    50.064,
+    -5.448,
+    50.142
+   ]
+  },
+  "gb_sea_plymouth_amateur_rowing_club": {
+   "title": "Sea near Plymouth Amateur Rowing Club",
+   "bbox": [
+    -4.388,
+    50.198,
+    -3.824,
+    50.559
+   ],
+   "depth": false,
+   "bytes": 182566,
+   "core": [
+    -4.134,
+    50.36,
+    -4.078,
+    50.397
+   ]
+  },
+  "gb_sea_queenborough_rowing_club": {
+   "title": "Sea near Queenborough Rowing Club",
+   "bbox": [
+    0.454,
+    51.283,
+    1.03,
+    51.598
+   ],
+   "depth": false,
+   "bytes": 210526,
+   "core": [
+    0.713,
+    51.399,
+    0.771,
+    51.436
+   ]
+  },
+  "gb_sea_royal_west_of_scotland_amateur_boat_club": {
+   "title": "Sea near Royal West Of Scotland Amateur Boat Club",
+   "bbox": [
+    -5.112,
+    55.782,
+    -4.47,
+    56.144
+   ],
+   "depth": false,
+   "bytes": 83414,
+   "core": [
+    -4.823,
+    55.945,
+    -4.759,
+    55.981
+   ]
+  },
+  "gb_sea_saint_mary_s_gig_club": {
+   "title": "Sea near Saint Mary's Gig Club",
+   "bbox": [
+    -6.515,
+    49.818,
+    -6.173,
+    50.028
+   ],
+   "depth": false,
+   "bytes": 139717,
+   "core": [
+    -6.336,
+    49.899,
+    -6.281,
+    49.935
+   ]
+  },
+  "gb_sea_southsea_rowing_club": {
+   "title": "Sea near Southsea Rowing Club",
+   "bbox": [
+    -1.456,
+    50.53,
+    -0.814,
+    50.933
+   ],
+   "depth": false,
+   "bytes": 262932,
+   "core": [
+    -1.2,
+    50.612,
+    -1.07,
+    50.802
+   ]
+  },
+  "gb_sea_swanage_sea_rowing_club": {
+   "title": "Sea near Swanage Sea Rowing Club",
+   "bbox": [
+    -2.236,
+    50.531,
+    -1.67,
+    50.783
+   ],
+   "depth": false,
+   "bytes": 213578,
+   "core": [
+    -1.982,
+    50.589,
+    -1.925,
+    50.625
+   ]
+  },
+  "gb_sea_water": {
+   "title": "Sea near rowing club",
+   "bbox": [
+    0.813,
+    51.223,
+    1.388,
+    51.553
+   ],
+   "depth": false,
+   "bytes": 49802,
+   "core": [
+    1.072,
+    51.354,
+    1.129,
+    51.39
+   ]
+  },
+  "gb_sea_whitby_fishermens_amateur_rowing_club": {
+   "title": "Sea near Whitby Fishermens Amateur Rowing Club",
+   "bbox": [
+    -0.922,
+    54.307,
+    -0.338,
+    54.63
+   ],
+   "depth": false,
+   "bytes": 16237,
+   "core": [
+    -0.644,
+    54.47,
+    -0.582,
+    54.506
+   ]
+  },
+  "ie_sea_cairndhu_rowing_club": {
+   "title": "Sea near Cairndhu Rowing Club",
+   "bbox": [
+    -6.137,
+    54.662,
+    -5.487,
+    55.073
+   ],
+   "depth": false,
+   "bytes": 44629,
+   "core": [
+    -5.872,
+    54.825,
+    -5.769,
+    54.91
+   ]
+  },
+  "ie_sea_castletownshend_rowing_club": {
+   "title": "Sea near Castletownshend Rowing Club",
+   "bbox": [
+    -9.462,
+    51.402,
+    -8.884,
+    51.709
+   ],
+   "depth": false,
+   "bytes": 97231,
+   "core": [
+    -9.202,
+    51.51,
+    -9.144,
+    51.546
+   ]
+  },
+  "ie_sea_greystones_rowing_and_kayaking_club": {
+   "title": "Sea near Greystones Rowing and Kayaking Club",
+   "bbox": [
+    -6.284,
+    52.969,
+    -5.929,
+    53.331
+   ],
+   "depth": false,
+   "bytes": 30074,
+   "core": [
+    -6.094,
+    53.132,
+    -6.034,
+    53.168
+   ]
+  },
+  "ie_sea_kilmacsimon_rowing_club": {
+   "title": "Sea near Kilmacsimon Rowing Club",
+   "bbox": [
+    -8.925,
+    51.554,
+    -8.345,
+    51.916
+   ],
+   "depth": false,
+   "bytes": 61231,
+   "core": [
+    -8.664,
+    51.717,
+    -8.606,
+    51.753
+   ]
+  },
+  "ie_sea_overthewater_rowing": {
+   "title": "Sea near Overthewater Rowing",
+   "bbox": [
+    -10.521,
+    51.769,
+    -9.938,
+    52.131
+   ],
+   "depth": false,
+   "bytes": 79662,
+   "core": [
+    -10.259,
+    51.932,
+    -10.201,
+    51.968
+   ]
+  },
+  "ie_sea_passage_west_rowing_club": {
+   "title": "Sea near Passage West Rowing Club",
+   "bbox": [
+    -8.627,
+    51.691,
+    -8.045,
+    51.957
+   ],
+   "depth": false,
+   "bytes": 75505,
+   "core": [
+    -8.365,
+    51.854,
+    -8.307,
+    51.891
+   ]
   }
  }
 }
