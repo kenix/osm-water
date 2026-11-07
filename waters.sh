@@ -72,7 +72,7 @@ one() {
   set -- $bathy
   [ -n "${ONLY:-}" ] && [[ $slug != $ONLY ]] && return
   [ -s out/$slug.json.gz ] && [ -n "${KEEP:-}" ] && return
-  SRC=src/all.pbf ./lake.sh "$slug" "$name" "$bbox" ${1:+src/bathy/$1} ${2:-} > "work/$slug.log" 2>&1 || { echo "FAILED $slug"; tail -3 "work/$slug.log"; return; }
+  SRC=src/all.pbf TITLE="$title" ./lake.sh "$slug" "$name" "$bbox" ${1:+src/bathy/$1} ${2:-} > "work/$slug.log" 2>&1 || { echo "FAILED $slug"; tail -3 "work/$slug.log"; return; }
   tail -1 "work/$slug.log"
 }
 export -f one

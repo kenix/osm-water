@@ -19,9 +19,11 @@ river=; [[ $name == *=* ]] && river=1
 x() { osmium tags-filter "$W/area.pbf" "${@:2}" -o "$W/$1.pbf" -O && osmium export "$W/$1.pbf" -u type_id -o "$W/$1.geojson" -O; }
 x lake nwr/natural=water
 if [ -n "$river" ]; then
-  python3 -I "$S/clip.py" "$W/lake.geojson" "$name" "$bbox" "$W/river.geojson"
+  # one lake by id keeps its name (TITLE), so it is drawn with a shore; a stretch is 'water'
+  label=water; [[ $name == @id=* && $name != *\;* && -n ${TITLE:-} ]] && label=$TITLE
+  python3 -I "$S/clip.py" "$W/lake.geojson" "$name" "$bbox" "$W/river.geojson" "$label"
   mv "$W/river.geojson" "$W/lake.geojson"
-  name=water
+  name=$label
 fi
 x marks n/place=town,city,village,island,islet w/place=island,islet r/place=island \
   nwr/natural=cape,peninsula,bay,beach nwr/amenity=ferry_terminal nwr/sport

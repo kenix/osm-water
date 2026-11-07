@@ -1,12 +1,14 @@
 """River water area for one stretch: the natural=water polygons matching a selector, clipped to a bbox.
-Usage: python3 -I clip.py <water.geojson> <key=v1,v2[;key=v1,...]> <w,s,e,n> <out.geojson>
+Usage: python3 -I clip.py <water.geojson> <key=v1,v2[;key=v1,...]> <w,s,e,n> <out.geojson> [<name>]
 A polygon matching any of the ;-separated selectors is taken. The key @id selects by OSM id (w123, r456:
 osmium export -u type_id), for one lake among others or a river's polygon that lacks water=river.
-Every output feature is named 'water', so measure.py and build.py take it as the lake."""
+Every output feature is named <name> ('water' when not given: a river stretch, drawn without outlines), so
+measure.py and build.py take it as the lake."""
 import json, sys
 
 src, bbox = json.load(open(sys.argv[1])), [float(v) for v in sys.argv[3].split(',')]
 sels = [(k, set(v.split(','))) for k, v in (s.split('=') for s in sys.argv[2].split(';'))]
+label = sys.argv[5] if len(sys.argv) > 5 else 'water'
 
 
 def clip(ring):
@@ -38,7 +40,7 @@ for f in src['features']:
     for poly in [g['coordinates']] if g['type'] == 'Polygon' else g['coordinates'] if g['type'] == 'MultiPolygon' else []:
         rings = [clip(r[:-1]) for r in poly]
         if rings[0]:
-            out.append({'type': 'Feature', 'properties': {'name': 'water'},
+            out.append({'type': 'Feature', 'properties': {'name': label},
                         'geometry': {'type': 'Polygon', 'coordinates': [r for r in rings if r]}})
 json.dump({'type': 'FeatureCollection', 'features': out}, open(sys.argv[4], 'w'))
 print('water polygons:', len(out))
