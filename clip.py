@@ -1,10 +1,12 @@
 """River water area for one stretch: the natural=water polygons matching a selector, clipped to a bbox.
-Usage: python3 -I clip.py <water.geojson> <key=v1,v2> <w,s,e,n> <out.geojson>
+Usage: python3 -I clip.py <water.geojson> <key=v1,v2[;key=v1,...]> <w,s,e,n> <out.geojson>
+A polygon matching any of the ;-separated selectors is taken. The key @id selects by OSM id (w123, r456:
+osmium export -u type_id), for one lake among others or a river's polygon that lacks water=river.
 Every output feature is named 'water', so measure.py and build.py take it as the lake."""
 import json, sys
 
-src, (key, vals), bbox = json.load(open(sys.argv[1])), sys.argv[2].split('='), [float(v) for v in sys.argv[3].split(',')]
-vals = set(vals.split(','))
+src, bbox = json.load(open(sys.argv[1])), [float(v) for v in sys.argv[3].split(',')]
+sels = [(k, set(v.split(','))) for k, v in (s.split('=') for s in sys.argv[2].split(';'))]
 
 
 def clip(ring):
@@ -32,7 +34,7 @@ def clip(ring):
 out = []
 for f in src['features']:
     g = f['geometry']
-    if not g or f['properties'].get(key) not in vals: continue
+    if not g or not any((f.get('id') if k == '@id' else f['properties'].get(k)) in vs for k, vs in sels): continue
     for poly in [g['coordinates']] if g['type'] == 'Polygon' else g['coordinates'] if g['type'] == 'MultiPolygon' else []:
         rings = [clip(r[:-1]) for r in poly]
         if rings[0]:

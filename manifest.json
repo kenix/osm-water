@@ -1,12 +1,12 @@
 {
- "release": "water-2026-11-03",
+ "release": "water-2026-11-07",
  "format": 1,
- "base": "https://github.com/kenix/osm-water/releases/download/water-2026-11-03/",
+ "base": "https://github.com/kenix/osm-water/releases/download/water-2026-11-07/",
  "licence": "ODbL-1.0",
  "attribution": "© OpenStreetMap contributors",
  "orient": {
   "file": "orient.json.gz",
-  "bytes": 42793,
+  "bytes": 148409,
   "licence": "public domain (Natural Earth)"
  },
  "waters": {
@@ -19,7 +19,7 @@
     47.4
    ],
    "depth": true,
-   "bytes": 265403
+   "bytes": 265374
   },
   "greifensee": {
    "title": "Greifensee",
@@ -86,6 +86,4154 @@
    ],
    "depth": false,
    "bytes": 26148
+  },
+  "at_attersee": {
+   "title": "Attersee",
+   "bbox": [
+    13.479,
+    47.787,
+    13.599,
+    47.953
+   ],
+   "depth": false,
+   "bytes": 37601,
+   "core": [
+    13.479,
+    47.787,
+    13.599,
+    47.953
+   ]
+  },
+  "at_bodensee": {
+   "title": "Bodensee",
+   "bbox": [
+    9.596,
+    47.415,
+    9.862,
+    47.596
+   ],
+   "depth": false,
+   "bytes": 74688,
+   "core": [
+    9.702,
+    47.488,
+    9.755,
+    47.524
+   ]
+  },
+  "at_donau_2": {
+   "title": "Donau",
+   "bbox": [
+    15.389,
+    48.298,
+    15.711,
+    48.49
+   ],
+   "depth": false,
+   "bytes": 58390,
+   "core": [
+    15.498,
+    48.37,
+    15.602,
+    48.418
+   ]
+  },
+  "at_donau_3": {
+   "title": "Donau",
+   "bbox": [
+    16.186,
+    48.089,
+    16.621,
+    48.43
+   ],
+   "depth": false,
+   "bytes": 181520,
+   "core": [
+    16.294,
+    48.161,
+    16.513,
+    48.358
+   ]
+  },
+  "at_donau": {
+   "title": "Donau",
+   "bbox": [
+    14.027,
+    48.22,
+    14.44,
+    48.418
+   ],
+   "depth": false,
+   "bytes": 75660,
+   "core": [
+    14.135,
+    48.293,
+    14.332,
+    48.346
+   ]
+  },
+  "at_grosse_tulln": {
+   "title": "Große Tulln",
+   "bbox": [
+    15.894,
+    48.236,
+    16.165,
+    48.417
+   ],
+   "depth": false,
+   "bytes": 17412,
+   "core": [
+    16.002,
+    48.308,
+    16.057,
+    48.345
+   ]
+  },
+  "at_inn": {
+   "title": "Inn",
+   "bbox": [
+    12.033,
+    47.497,
+    12.299,
+    47.678
+   ],
+   "depth": false,
+   "bytes": 34159,
+   "core": [
+    12.139,
+    47.569,
+    12.192,
+    47.606
+   ]
+  },
+  "at_melk": {
+   "title": "Melk",
+   "bbox": [
+    15.072,
+    48.122,
+    15.468,
+    48.325
+   ],
+   "depth": false,
+   "bytes": 73204,
+   "core": [
+    15.18,
+    48.194,
+    15.36,
+    48.252
+   ]
+  },
+  "at_mondsee": {
+   "title": "Mondsee",
+   "bbox": [
+    13.337,
+    47.796,
+    13.454,
+    47.855
+   ],
+   "depth": false,
+   "bytes": 19135,
+   "core": [
+    13.337,
+    47.796,
+    13.454,
+    47.855
+   ]
+  },
+  "at_mur": {
+   "title": "Mur",
+   "bbox": [
+    15.328,
+    46.925,
+    15.591,
+    47.106
+   ],
+   "depth": false,
+   "bytes": 45377,
+   "core": [
+    15.433,
+    46.997,
+    15.486,
+    47.034
+   ]
+  },
+  "at_ossiacher_see": {
+   "title": "Ossiacher See",
+   "bbox": [
+    13.77,
+    46.56,
+    14.032,
+    46.741
+   ],
+   "depth": false,
+   "bytes": 29089,
+   "core": [
+    13.875,
+    46.633,
+    13.927,
+    46.669
+   ]
+  },
+  "at_poeschengraben": {
+   "title": "Pöschengraben",
+   "bbox": [
+    9.451,
+    47.389,
+    9.717,
+    47.57
+   ],
+   "depth": false,
+   "bytes": 46055,
+   "core": [
+    9.557,
+    47.461,
+    9.61,
+    47.497
+   ]
+  },
+  "at_river": {
+   "title": "river",
+   "bbox": [
+    13.235,
+    47.679,
+    13.502,
+    47.86
+   ],
+   "depth": false,
+   "bytes": 17640,
+   "core": [
+    13.342,
+    47.751,
+    13.395,
+    47.787
+   ]
+  },
+  "at_ruderverein_staw_water": {
+   "title": "Ruderverein Staw water",
+   "bbox": [
+    16.421,
+    48.211,
+    16.442,
+    48.241
+   ],
+   "depth": false,
+   "bytes": 19158,
+   "core": [
+    16.421,
+    48.211,
+    16.442,
+    48.241
+   ]
+  },
+  "at_traunsee": {
+   "title": "Traunsee",
+   "bbox": [
+    13.762,
+    47.806,
+    13.82,
+    47.92
+   ],
+   "depth": false,
+   "bytes": 19778,
+   "core": [
+    13.762,
+    47.806,
+    13.82,
+    47.92
+   ]
+  },
+  "at_woerthersee": {
+   "title": "Wörthersee",
+   "bbox": [
+    14.039,
+    46.603,
+    14.258,
+    46.639
+   ],
+   "depth": false,
+   "bytes": 49806,
+   "core": [
+    14.039,
+    46.603,
+    14.258,
+    46.639
+   ]
+  },
+  "ch_aare_2": {
+   "title": "Aare",
+   "bbox": [
+    7.253,
+    46.875,
+    7.517,
+    47.056
+   ],
+   "depth": false,
+   "bytes": 50972,
+   "core": [
+    7.359,
+    46.948,
+    7.411,
+    46.984
+   ]
+  },
+  "ch_aare": {
+   "title": "Aare",
+   "bbox": [
+    7.399,
+    47.111,
+    7.663,
+    47.292
+   ],
+   "depth": false,
+   "bytes": 23464,
+   "core": [
+    7.504,
+    47.183,
+    7.557,
+    47.219
+   ]
+  },
+  "ch_bodensee": {
+   "title": "Bodensee",
+   "bbox": [
+    9.344,
+    47.396,
+    9.61,
+    47.577
+   ],
+   "depth": false,
+   "bytes": 38434,
+   "core": [
+    9.45,
+    47.468,
+    9.504,
+    47.504
+   ]
+  },
+  "ch_lac_de_neuchatel": {
+   "title": "Lac de Neuchâtel",
+   "bbox": [
+    6.631,
+    46.782,
+    7.054,
+    47.014
+   ],
+   "depth": false,
+   "bytes": 116579,
+   "core": [
+    6.631,
+    46.782,
+    7.054,
+    47.014
+   ]
+  },
+  "ch_le_leman_2": {
+   "title": "Le Léman",
+   "bbox": [
+    6.114,
+    46.293,
+    6.375,
+    46.474
+   ],
+   "depth": false,
+   "bytes": 38380,
+   "core": [
+    6.218,
+    46.365,
+    6.27,
+    46.402
+   ]
+  },
+  "ch_le_leman": {
+   "title": "Le Léman",
+   "bbox": [
+    6.471,
+    46.422,
+    6.732,
+    46.603
+   ],
+   "depth": false,
+   "bytes": 24117,
+   "core": [
+    6.575,
+    46.495,
+    6.627,
+    46.531
+   ]
+  },
+  "ch_limmat": {
+   "title": "Limmat",
+   "bbox": [
+    8.176,
+    47.366,
+    8.458,
+    47.557
+   ],
+   "depth": false,
+   "bytes": 49997,
+   "core": [
+    8.282,
+    47.438,
+    8.352,
+    47.485
+   ]
+  },
+  "ch_rotsee": {
+   "title": "Rotsee",
+   "bbox": [
+    8.296,
+    47.06,
+    8.332,
+    47.079
+   ],
+   "depth": false,
+   "bytes": 2251,
+   "core": [
+    8.296,
+    47.06,
+    8.332,
+    47.079
+   ]
+  },
+  "ch_sarnersee": {
+   "title": "Sarnersee",
+   "bbox": [
+    8.185,
+    46.843,
+    8.248,
+    46.893
+   ],
+   "depth": false,
+   "bytes": 8464,
+   "core": [
+    8.185,
+    46.843,
+    8.248,
+    46.893
+   ]
+  },
+  "ch_schiffenensee": {
+   "title": "Schiffenensee",
+   "bbox": [
+    7.136,
+    46.812,
+    7.199,
+    46.888
+   ],
+   "depth": false,
+   "bytes": 8790,
+   "core": [
+    7.136,
+    46.812,
+    7.199,
+    46.888
+   ]
+  },
+  "ch_sempachersee": {
+   "title": "Sempachersee",
+   "bbox": [
+    8.117,
+    47.115,
+    8.196,
+    47.177
+   ],
+   "depth": false,
+   "bytes": 6824,
+   "core": [
+    8.117,
+    47.115,
+    8.196,
+    47.177
+   ]
+  },
+  "ch_zugersee": {
+   "title": "Zugersee",
+   "bbox": [
+    8.449,
+    47.059,
+    8.532,
+    47.186
+   ],
+   "depth": false,
+   "bytes": 19772,
+   "core": [
+    8.449,
+    47.059,
+    8.532,
+    47.186
+   ]
+  },
+  "de_alb": {
+   "title": "Alb",
+   "bbox": [
+    8.198,
+    48.92,
+    8.479,
+    49.108
+   ],
+   "depth": false,
+   "bytes": 75781,
+   "core": [
+    8.307,
+    48.992,
+    8.369,
+    49.036
+   ]
+  },
+  "de_aller_2": {
+   "title": "Aller",
+   "bbox": [
+    10.664,
+    52.341,
+    10.959,
+    52.523
+   ],
+   "depth": false,
+   "bytes": 36642,
+   "core": [
+    10.782,
+    52.413,
+    10.841,
+    52.45
+   ]
+  },
+  "de_aller": {
+   "title": "Aller",
+   "bbox": [
+    8.998,
+    52.715,
+    9.381,
+    53.002
+   ],
+   "depth": false,
+   "bytes": 98819,
+   "core": [
+    9.117,
+    52.787,
+    9.262,
+    52.93
+   ]
+  },
+  "de_alte_oder": {
+   "title": "Alte Oder",
+   "bbox": [
+    14.41,
+    52.247,
+    14.704,
+    52.428
+   ],
+   "depth": false,
+   "bytes": 51654,
+   "core": [
+    14.528,
+    52.319,
+    14.586,
+    52.356
+   ]
+  },
+  "de_alter_hasearm": {
+   "title": "Alter Hasearm",
+   "bbox": [
+    7.853,
+    52.219,
+    8.147,
+    52.4
+   ],
+   "depth": false,
+   "bytes": 41857,
+   "core": [
+    7.97,
+    52.291,
+    8.03,
+    52.328
+   ]
+  },
+  "de_altrheinhafen": {
+   "title": "Altrheinhafen",
+   "bbox": [
+    8.279,
+    49.273,
+    8.632,
+    49.704
+   ],
+   "depth": false,
+   "bytes": 125855,
+   "core": [
+    8.39,
+    49.345,
+    8.521,
+    49.632
+   ]
+  },
+  "de_altwarmbuechener_see": {
+   "title": "Altwarmbüchener See",
+   "bbox": [
+    9.841,
+    52.416,
+    9.868,
+    52.43
+   ],
+   "depth": false,
+   "bytes": 2684,
+   "core": [
+    9.841,
+    52.416,
+    9.868,
+    52.43
+   ]
+  },
+  "de_aussenalster": {
+   "title": "Außenalster",
+   "bbox": [
+    9.991,
+    53.554,
+    10.021,
+    53.583
+   ],
+   "depth": false,
+   "bytes": 9205,
+   "core": [
+    9.991,
+    53.554,
+    10.021,
+    53.583
+   ]
+  },
+  "de_baldeneysee": {
+   "title": "Baldeneysee",
+   "bbox": [
+    6.997,
+    51.384,
+    7.084,
+    51.411
+   ],
+   "depth": false,
+   "bytes": 12407,
+   "core": [
+    6.997,
+    51.384,
+    7.084,
+    51.411
+   ]
+  },
+  "de_banter_see": {
+   "title": "Banter See",
+   "bbox": [
+    8.071,
+    53.501,
+    8.119,
+    53.514
+   ],
+   "depth": false,
+   "bytes": 4706,
+   "core": [
+    8.071,
+    53.501,
+    8.119,
+    53.514
+   ]
+  },
+  "de_belauer_see": {
+   "title": "Belauer See",
+   "bbox": [
+    10.239,
+    54.089,
+    10.263,
+    54.114
+   ],
+   "depth": false,
+   "bytes": 1681,
+   "core": [
+    10.239,
+    54.089,
+    10.263,
+    54.114
+   ]
+  },
+  "de_bleilochtalsperre": {
+   "title": "Bleilochtalsperre",
+   "bbox": [
+    11.671,
+    50.409,
+    11.764,
+    50.533
+   ],
+   "depth": false,
+   "bytes": 24476,
+   "core": [
+    11.671,
+    50.409,
+    11.764,
+    50.533
+   ]
+  },
+  "de_bodensee_2": {
+   "title": "Bodensee",
+   "bbox": [
+    9.354,
+    47.561,
+    9.62,
+    47.742
+   ],
+   "depth": false,
+   "bytes": 46730,
+   "core": [
+    9.46,
+    47.634,
+    9.514,
+    47.67
+   ]
+  },
+  "de_bodensee": {
+   "title": "Bodensee",
+   "bbox": [
+    9.04,
+    47.577,
+    9.312,
+    47.851
+   ],
+   "depth": false,
+   "bytes": 107033,
+   "core": [
+    9.146,
+    47.649,
+    9.205,
+    47.778
+   ]
+  },
+  "de_daemeritzsee": {
+   "title": "Dämeritzsee",
+   "bbox": [
+    13.72,
+    52.414,
+    13.748,
+    52.429
+   ],
+   "depth": false,
+   "bytes": 11614,
+   "core": [
+    13.72,
+    52.414,
+    13.748,
+    52.429
+   ]
+  },
+  "de_datteln_hamm_kanal": {
+   "title": "Datteln-Hamm-Kanal",
+   "bbox": [
+    7.677,
+    51.597,
+    7.967,
+    51.778
+   ],
+   "depth": false,
+   "bytes": 68583,
+   "core": [
+    7.793,
+    51.67,
+    7.851,
+    51.706
+   ]
+  },
+  "de_donau_2": {
+   "title": "Donau",
+   "bbox": [
+    11.05,
+    48.648,
+    11.322,
+    48.83
+   ],
+   "depth": false,
+   "bytes": 27880,
+   "core": [
+    11.159,
+    48.721,
+    11.213,
+    48.757
+   ]
+  },
+  "de_donau_3": {
+   "title": "Donau",
+   "bbox": [
+    12.812,
+    48.737,
+    13.092,
+    48.92
+   ],
+   "depth": false,
+   "bytes": 35466,
+   "core": [
+    12.922,
+    48.81,
+    12.983,
+    48.848
+   ]
+  },
+  "de_donau_4": {
+   "title": "Donau",
+   "bbox": [
+    12.43,
+    48.797,
+    12.71,
+    48.988
+   ],
+   "depth": false,
+   "bytes": 39558,
+   "core": [
+    12.54,
+    48.869,
+    12.6,
+    48.916
+   ]
+  },
+  "de_donau_5": {
+   "title": "Donau",
+   "bbox": [
+    11.919,
+    48.938,
+    12.194,
+    49.119
+   ],
+   "depth": false,
+   "bytes": 45464,
+   "core": [
+    12.029,
+    49.01,
+    12.084,
+    49.046
+   ]
+  },
+  "de_donau": {
+   "title": "Donau",
+   "bbox": [
+    11.267,
+    48.658,
+    11.539,
+    48.839
+   ],
+   "depth": false,
+   "bytes": 16544,
+   "core": [
+    11.376,
+    48.73,
+    11.43,
+    48.766
+   ]
+  },
+  "de_dortmund_ems_kanal_2": {
+   "title": "Dortmund-Ems-Kanal",
+   "bbox": [
+    7.325,
+    51.757,
+    7.808,
+    52.061
+   ],
+   "depth": false,
+   "bytes": 106605,
+   "core": [
+    7.442,
+    51.83,
+    7.692,
+    51.989
+   ]
+  },
+  "de_dortmund_ems_kanal_3": {
+   "title": "Dortmund-Ems-Kanal",
+   "bbox": [
+    7.161,
+    52.431,
+    7.457,
+    52.615
+   ],
+   "depth": false,
+   "bytes": 22889,
+   "core": [
+    7.279,
+    52.504,
+    7.339,
+    52.542
+   ]
+  },
+  "de_dortmund_ems_kanal": {
+   "title": "Dortmund-Ems-Kanal",
+   "bbox": [
+    7.151,
+    52.597,
+    7.448,
+    52.778
+   ],
+   "depth": false,
+   "bytes": 79088,
+   "core": [
+    7.27,
+    52.669,
+    7.329,
+    52.705
+   ]
+  },
+  "de_dove_elbe": {
+   "title": "Dove Elbe",
+   "bbox": [
+    9.844,
+    53.145,
+    10.694,
+    53.699
+   ],
+   "depth": false,
+   "bytes": 425257,
+   "core": [
+    9.965,
+    53.217,
+    10.573,
+    53.627
+   ]
+  },
+  "de_eider": {
+   "title": "Eider",
+   "bbox": [
+    9.522,
+    54.217,
+    9.839,
+    54.399
+   ],
+   "depth": false,
+   "bytes": 21800,
+   "core": [
+    9.645,
+    54.289,
+    9.716,
+    54.326
+   ]
+  },
+  "de_einfelder_see": {
+   "title": "Einfelder See",
+   "bbox": [
+    9.983,
+    54.128,
+    10.018,
+    54.159
+   ],
+   "depth": false,
+   "bytes": 15651,
+   "core": [
+    9.983,
+    54.128,
+    10.018,
+    54.159
+   ]
+  },
+  "de_elbe_2": {
+   "title": "Elbe",
+   "bbox": [
+    12.863,
+    51.473,
+    13.152,
+    51.654
+   ],
+   "depth": false,
+   "bytes": 41708,
+   "core": [
+    12.979,
+    51.546,
+    13.037,
+    51.582
+   ]
+  },
+  "de_elbe_3": {
+   "title": "Elbe",
+   "bbox": [
+    13.541,
+    50.874,
+    14.075,
+    51.153
+   ],
+   "depth": false,
+   "bytes": 132575,
+   "core": [
+    13.656,
+    50.946,
+    13.96,
+    51.081
+   ]
+  },
+  "de_elbe_4": {
+   "title": "Elbe",
+   "bbox": [
+    11.893,
+    51.739,
+    12.394,
+    51.95
+   ],
+   "depth": false,
+   "bytes": 108505,
+   "core": [
+    12.009,
+    51.812,
+    12.278,
+    51.877
+   ]
+  },
+  "de_elbe": {
+   "title": "Elbe",
+   "bbox": [
+    13.337,
+    51.062,
+    13.624,
+    51.243
+   ],
+   "depth": false,
+   "bytes": 26245,
+   "core": [
+    13.452,
+    51.135,
+    13.509,
+    51.171
+   ]
+  },
+  "de_elfrather_see": {
+   "title": "Elfrather See",
+   "bbox": [
+    6.613,
+    51.374,
+    6.638,
+    51.397
+   ],
+   "depth": false,
+   "bytes": 2881,
+   "core": [
+    6.613,
+    51.374,
+    6.638,
+    51.397
+   ]
+  },
+  "de_elsterbecken": {
+   "title": "Elsterbecken",
+   "bbox": [
+    12.113,
+    51.245,
+    12.497,
+    51.447
+   ],
+   "depth": false,
+   "bytes": 86099,
+   "core": [
+    12.228,
+    51.317,
+    12.382,
+    51.375
+   ]
+  },
+  "de_ems_jade_kanal": {
+   "title": "Ems-Jade-Kanal",
+   "bbox": [
+    7.067,
+    53.277,
+    7.368,
+    53.458
+   ],
+   "depth": false,
+   "bytes": 151178,
+   "core": [
+    7.188,
+    53.349,
+    7.248,
+    53.385
+   ]
+  },
+  "de_ems": {
+   "title": "Ems",
+   "bbox": [
+    7.299,
+    52.186,
+    7.593,
+    52.367
+   ],
+   "depth": false,
+   "bytes": 46043,
+   "core": [
+    7.417,
+    52.258,
+    7.475,
+    52.294
+   ]
+  },
+  "de_erft": {
+   "title": "Erft",
+   "bbox": [
+    6.55,
+    50.783,
+    7.192,
+    51.341
+   ],
+   "depth": false,
+   "bytes": 302207,
+   "core": [
+    6.664,
+    50.855,
+    7.077,
+    51.268
+   ]
+  },
+  "de_faehrkanal": {
+   "title": "Fährkanal",
+   "bbox": [
+    12.932,
+    54.232,
+    13.24,
+    54.413
+   ],
+   "depth": false,
+   "bytes": 10482,
+   "core": [
+    13.055,
+    54.305,
+    13.117,
+    54.341
+   ]
+  },
+  "de_floethe": {
+   "title": "Flöthe",
+   "bbox": [
+    8.473,
+    52.244,
+    8.767,
+    52.425
+   ],
+   "depth": false,
+   "bytes": 7339,
+   "core": [
+    8.591,
+    52.316,
+    8.65,
+    52.352
+   ]
+  },
+  "de_forggensee": {
+   "title": "Forggensee",
+   "bbox": [
+    10.703,
+    47.575,
+    10.768,
+    47.658
+   ],
+   "depth": false,
+   "bytes": 12299,
+   "core": [
+    10.703,
+    47.575,
+    10.768,
+    47.658
+   ]
+  },
+  "de_fuehlinger_see": {
+   "title": "Fühlinger See",
+   "bbox": [
+    6.901,
+    51.016,
+    6.94,
+    51.037
+   ],
+   "depth": false,
+   "bytes": 3085,
+   "core": [
+    6.901,
+    51.016,
+    6.94,
+    51.037
+   ]
+  },
+  "de_fuerstenwalder_spree": {
+   "title": "Fürstenwalder Spree",
+   "bbox": [
+    13.908,
+    52.271,
+    14.202,
+    52.452
+   ],
+   "depth": false,
+   "bytes": 19055,
+   "core": [
+    14.025,
+    52.343,
+    14.084,
+    52.379
+   ]
+  },
+  "de_fulda_2": {
+   "title": "Fulda",
+   "bbox": [
+    9.432,
+    51.31,
+    9.72,
+    51.491
+   ],
+   "depth": false,
+   "bytes": 32585,
+   "core": [
+    9.547,
+    51.383,
+    9.605,
+    51.419
+   ]
+  },
+  "de_fulda": {
+   "title": "Fulda",
+   "bbox": [
+    9.558,
+    50.77,
+    9.883,
+    51.084
+   ],
+   "depth": false,
+   "bytes": 49554,
+   "core": [
+    9.672,
+    50.842,
+    9.769,
+    51.012
+   ]
+  },
+  "de_geeste": {
+   "title": "Geeste",
+   "bbox": [
+    8.441,
+    53.461,
+    8.743,
+    53.642
+   ],
+   "depth": false,
+   "bytes": 53390,
+   "core": [
+    8.562,
+    53.533,
+    8.622,
+    53.57
+   ]
+  },
+  "de_goldkanal": {
+   "title": "Goldkanal",
+   "bbox": [
+    8.163,
+    48.908,
+    8.191,
+    48.943
+   ],
+   "depth": false,
+   "bytes": 7751,
+   "core": [
+    8.163,
+    48.908,
+    8.191,
+    48.943
+   ]
+  },
+  "de_grosse_isar": {
+   "title": "Große Isar",
+   "bbox": [
+    12.044,
+    48.464,
+    12.316,
+    48.644
+   ],
+   "depth": false,
+   "bytes": 23638,
+   "core": [
+    12.153,
+    48.536,
+    12.207,
+    48.572
+   ]
+  },
+  "de_grosser_dutzendteich": {
+   "title": "Großer Dutzendteich",
+   "bbox": [
+    11.108,
+    49.424,
+    11.125,
+    49.438
+   ],
+   "depth": false,
+   "bytes": 1198,
+   "core": [
+    11.108,
+    49.424,
+    11.125,
+    49.438
+   ]
+  },
+  "de_grosser_eutiner_see": {
+   "title": "Großer Eutiner See",
+   "bbox": [
+    10.61,
+    54.132,
+    10.671,
+    54.152
+   ],
+   "depth": false,
+   "bytes": 4778,
+   "core": [
+    10.61,
+    54.132,
+    10.671,
+    54.152
+   ]
+  },
+  "de_grosser_ratzeburger_see": {
+   "title": "Großer Ratzeburger See",
+   "bbox": [
+    10.727,
+    53.697,
+    10.777,
+    53.784
+   ],
+   "depth": false,
+   "bytes": 25735,
+   "core": [
+    10.727,
+    53.697,
+    10.777,
+    53.784
+   ]
+  },
+  "de_grosser_segeberger_see": {
+   "title": "Großer Segeberger See",
+   "bbox": [
+    10.306,
+    53.936,
+    10.346,
+    53.961
+   ],
+   "depth": false,
+   "bytes": 4315,
+   "core": [
+    10.306,
+    53.936,
+    10.346,
+    53.961
+   ]
+  },
+  "de_grosser_wannsee": {
+   "title": "Großer Wannsee",
+   "bbox": [
+    13.157,
+    52.418,
+    13.188,
+    52.438
+   ],
+   "depth": false,
+   "bytes": 8303,
+   "core": [
+    13.157,
+    52.418,
+    13.188,
+    52.438
+   ]
+  },
+  "de_haargraben": {
+   "title": "Haargraben",
+   "bbox": [
+    11.978,
+    53.974,
+    12.327,
+    54.188
+   ],
+   "depth": false,
+   "bytes": 65382,
+   "core": [
+    12.101,
+    54.046,
+    12.204,
+    54.115
+   ]
+  },
+  "de_hamme": {
+   "title": "Hamme",
+   "bbox": [
+    8.485,
+    52.978,
+    8.97,
+    53.294
+   ],
+   "depth": false,
+   "bytes": 235262,
+   "core": [
+    8.604,
+    53.05,
+    8.85,
+    53.222
+   ]
+  },
+  "de_havelaltarm": {
+   "title": "Havelaltarm",
+   "bbox": [
+    12.181,
+    52.515,
+    12.476,
+    52.696
+   ],
+   "depth": false,
+   "bytes": 83431,
+   "core": [
+    12.299,
+    52.588,
+    12.358,
+    52.624
+   ]
+  },
+  "de_havel": {
+   "title": "Havel",
+   "bbox": [
+    13.018,
+    52.21,
+    13.799,
+    52.78
+   ],
+   "depth": false,
+   "bytes": 372052,
+   "core": [
+    13.136,
+    52.283,
+    13.681,
+    52.707
+   ]
+  },
+  "de_herrenteich": {
+   "title": "Herrenteich",
+   "bbox": [
+    10.477,
+    53.828,
+    10.501,
+    53.851
+   ],
+   "depth": false,
+   "bytes": 5180,
+   "core": [
+    10.477,
+    53.828,
+    10.501,
+    53.851
+   ]
+  },
+  "de_hohensaaten_friedrichsthaler_wasserstrasse": {
+   "title": "Hohensaaten-Friedrichsthaler Wasserstraße",
+   "bbox": [
+    14.15,
+    52.967,
+    14.449,
+    53.148
+   ],
+   "depth": false,
+   "bytes": 37185,
+   "core": [
+    14.27,
+    53.039,
+    14.329,
+    53.076
+   ]
+  },
+  "de_humme": {
+   "title": "Humme",
+   "bbox": [
+    9.206,
+    51.995,
+    9.515,
+    52.182
+   ],
+   "depth": false,
+   "bytes": 23423,
+   "core": [
+    9.323,
+    52.067,
+    9.398,
+    52.11
+   ]
+  },
+  "de_hunte": {
+   "title": "Hunte",
+   "bbox": [
+    8.054,
+    53.028,
+    8.353,
+    53.209
+   ],
+   "depth": false,
+   "bytes": 39965,
+   "core": [
+    8.174,
+    53.1,
+    8.233,
+    53.137
+   ]
+  },
+  "de_inn_2": {
+   "title": "Inn",
+   "bbox": [
+    13.301,
+    48.459,
+    13.572,
+    48.64
+   ],
+   "depth": false,
+   "bytes": 38603,
+   "core": [
+    13.409,
+    48.531,
+    13.463,
+    48.568
+   ]
+  },
+  "de_inn": {
+   "title": "Inn",
+   "bbox": [
+    12.02,
+    47.745,
+    12.288,
+    47.926
+   ],
+   "depth": false,
+   "bytes": 24701,
+   "core": [
+    12.127,
+    47.817,
+    12.181,
+    47.853
+   ]
+  },
+  "de_ise": {
+   "title": "Ise",
+   "bbox": [
+    10.516,
+    52.643,
+    10.812,
+    52.824
+   ],
+   "depth": false,
+   "bytes": 5903,
+   "core": [
+    10.634,
+    52.716,
+    10.694,
+    52.752
+   ]
+  },
+  "de_kalksee": {
+   "title": "Kalksee",
+   "bbox": [
+    13.758,
+    52.447,
+    13.786,
+    52.47
+   ],
+   "depth": false,
+   "bytes": 2886,
+   "core": [
+    13.758,
+    52.447,
+    13.786,
+    52.47
+   ]
+  },
+  "de_kanalhafen": {
+   "title": "Kanalhafen",
+   "bbox": [
+    6.584,
+    51.306,
+    7.579,
+    51.749
+   ],
+   "depth": false,
+   "bytes": 445869,
+   "core": [
+    6.699,
+    51.379,
+    7.464,
+    51.676
+   ]
+  },
+  "de_kettwiger_stausee": {
+   "title": "Kettwiger Stausee",
+   "bbox": [
+    6.931,
+    51.355,
+    6.958,
+    51.365
+   ],
+   "depth": false,
+   "bytes": 3673,
+   "core": [
+    6.931,
+    51.355,
+    6.958,
+    51.365
+   ]
+  },
+  "de_kleiner_wannsee": {
+   "title": "Kleiner Wannsee",
+   "bbox": [
+    13.15,
+    52.409,
+    13.178,
+    52.423
+   ],
+   "depth": false,
+   "bytes": 5067,
+   "core": [
+    13.15,
+    52.409,
+    13.178,
+    52.423
+   ]
+  },
+  "de_krakower_see": {
+   "title": "Krakower See",
+   "bbox": [
+    12.255,
+    53.589,
+    12.344,
+    53.673
+   ],
+   "depth": false,
+   "bytes": 21042,
+   "core": [
+    12.255,
+    53.589,
+    12.344,
+    53.673
+   ]
+  },
+  "de_krimnicksee": {
+   "title": "Krimnicksee",
+   "bbox": [
+    13.651,
+    52.284,
+    13.68,
+    52.3
+   ],
+   "depth": false,
+   "bytes": 4376,
+   "core": [
+    13.651,
+    52.284,
+    13.68,
+    52.3
+   ]
+  },
+  "de_krueckau": {
+   "title": "Krückau",
+   "bbox": [
+    9.484,
+    53.659,
+    9.788,
+    53.84
+   ],
+   "depth": false,
+   "bytes": 36613,
+   "core": [
+    9.605,
+    53.732,
+    9.667,
+    53.768
+   ]
+  },
+  "de_krusa_krusau": {
+   "title": "Kruså - Krusau",
+   "bbox": [
+    9.272,
+    54.72,
+    9.588,
+    54.905
+   ],
+   "depth": false,
+   "bytes": 1734,
+   "core": [
+    9.396,
+    54.793,
+    9.463,
+    54.833
+   ]
+  },
+  "de_lahn_2": {
+   "title": "Lahn",
+   "bbox": [
+    7.929,
+    50.298,
+    8.211,
+    50.479
+   ],
+   "depth": false,
+   "bytes": 32243,
+   "core": [
+    8.042,
+    50.37,
+    8.098,
+    50.406
+   ]
+  },
+  "de_lahn_3": {
+   "title": "Lahn",
+   "bbox": [
+    7.458,
+    50.218,
+    7.872,
+    50.418
+   ],
+   "depth": false,
+   "bytes": 84787,
+   "core": [
+    7.571,
+    50.291,
+    7.759,
+    50.345
+   ]
+  },
+  "de_lahn_4": {
+   "title": "Lahn",
+   "bbox": [
+    8.526,
+    50.5,
+    8.816,
+    50.697
+   ],
+   "depth": false,
+   "bytes": 20405,
+   "core": [
+    8.639,
+    50.572,
+    8.703,
+    50.625
+   ]
+  },
+  "de_lahn": {
+   "title": "Lahn",
+   "bbox": [
+    8.609,
+    50.687,
+    8.893,
+    50.868
+   ],
+   "depth": false,
+   "bytes": 37035,
+   "core": [
+    8.723,
+    50.759,
+    8.78,
+    50.795
+   ]
+  },
+  "de_lanker_see": {
+   "title": "Lanker See",
+   "bbox": [
+    10.268,
+    54.193,
+    10.325,
+    54.224
+   ],
+   "depth": false,
+   "bytes": 8615,
+   "core": [
+    10.268,
+    54.193,
+    10.325,
+    54.224
+   ]
+  },
+  "de_lech": {
+   "title": "Lech",
+   "bbox": [
+    10.74,
+    47.998,
+    11.009,
+    48.179
+   ],
+   "depth": false,
+   "bytes": 24573,
+   "core": [
+    10.848,
+    48.071,
+    10.901,
+    48.107
+   ]
+  },
+  "de_lehnitzsee": {
+   "title": "Lehnitzsee",
+   "bbox": [
+    13.255,
+    52.744,
+    13.288,
+    52.767
+   ],
+   "depth": false,
+   "bytes": 3373,
+   "core": [
+    13.255,
+    52.744,
+    13.288,
+    52.767
+   ]
+  },
+  "de_leine": {
+   "title": "Leine",
+   "bbox": [
+    9.549,
+    52.272,
+    9.87,
+    52.468
+   ],
+   "depth": false,
+   "bytes": 54982,
+   "core": [
+    9.667,
+    52.344,
+    9.752,
+    52.396
+   ]
+  },
+  "de_lippe": {
+   "title": "Lippe",
+   "bbox": [
+    6.442,
+    51.559,
+    6.791,
+    51.753
+   ],
+   "depth": false,
+   "bytes": 105971,
+   "core": [
+    6.557,
+    51.632,
+    6.676,
+    51.681
+   ]
+  },
+  "de_maerkischer_ruderverein_water": {
+   "title": "Märkischer Ruderverein water",
+   "bbox": [
+    13.184,
+    52.502,
+    13.202,
+    52.514
+   ],
+   "depth": false,
+   "bytes": 5001,
+   "core": [
+    13.184,
+    52.502,
+    13.202,
+    52.514
+   ]
+  },
+  "de_magnusgraben": {
+   "title": "Magnusgraben",
+   "bbox": [
+    9.941,
+    52.533,
+    10.239,
+    52.715
+   ],
+   "depth": false,
+   "bytes": 45753,
+   "core": [
+    10.059,
+    52.605,
+    10.12,
+    52.643
+   ]
+  },
+  "de_main_2": {
+   "title": "Main",
+   "bbox": [
+    8.994,
+    49.871,
+    9.274,
+    50.052
+   ],
+   "depth": false,
+   "bytes": 31219,
+   "core": [
+    9.106,
+    49.944,
+    9.162,
+    49.98
+   ]
+  },
+  "de_main_3": {
+   "title": "Main",
+   "bbox": [
+    10.106,
+    49.955,
+    10.386,
+    50.136
+   ],
+   "depth": false,
+   "bytes": 36773,
+   "core": [
+    10.218,
+    50.027,
+    10.274,
+    50.063
+   ]
+  },
+  "de_main_4": {
+   "title": "Main",
+   "bbox": [
+    9.118,
+    49.616,
+    9.395,
+    49.797
+   ],
+   "depth": false,
+   "bytes": 25145,
+   "core": [
+    9.229,
+    49.688,
+    9.284,
+    49.724
+   ]
+  },
+  "de_main_5": {
+   "title": "Main",
+   "bbox": [
+    8.696,
+    50.036,
+    9.05,
+    50.22
+   ],
+   "depth": false,
+   "bytes": 51012,
+   "core": [
+    8.808,
+    50.108,
+    8.938,
+    50.147
+   ]
+  },
+  "de_main_6": {
+   "title": "Main",
+   "bbox": [
+    10.023,
+    49.652,
+    10.301,
+    49.833
+   ],
+   "depth": false,
+   "bytes": 41214,
+   "core": [
+    10.134,
+    49.724,
+    10.19,
+    49.76
+   ]
+  },
+  "de_main_7": {
+   "title": "Main",
+   "bbox": [
+    9.685,
+    49.807,
+    9.964,
+    49.988
+   ],
+   "depth": false,
+   "bytes": 28542,
+   "core": [
+    9.797,
+    49.879,
+    9.852,
+    49.916
+   ]
+  },
+  "de_main_donau_kanal_2": {
+   "title": "Main-Donau-Kanal",
+   "bbox": [
+    10.924,
+    49.271,
+    11.199,
+    49.452
+   ],
+   "depth": false,
+   "bytes": 41845,
+   "core": [
+    11.034,
+    49.344,
+    11.089,
+    49.38
+   ]
+  },
+  "de_main_donau_kanal": {
+   "title": "Main-Donau-Kanal",
+   "bbox": [
+    10.834,
+    49.505,
+    11.111,
+    49.686
+   ],
+   "depth": false,
+   "bytes": 45070,
+   "core": [
+    10.945,
+    49.577,
+    11.0,
+    49.613
+   ]
+  },
+  "de_main": {
+   "title": "Main",
+   "bbox": [
+    9.393,
+    49.673,
+    9.671,
+    49.854
+   ],
+   "depth": false,
+   "bytes": 41080,
+   "core": [
+    9.505,
+    49.745,
+    9.56,
+    49.782
+   ]
+  },
+  "de_maschsee": {
+   "title": "Maschsee",
+   "bbox": [
+    9.731,
+    52.34,
+    9.759,
+    52.365
+   ],
+   "depth": false,
+   "bytes": 5770,
+   "core": [
+    9.731,
+    52.34,
+    9.759,
+    52.365
+   ]
+  },
+  "de_mirower_see": {
+   "title": "Mirower See",
+   "bbox": [
+    12.792,
+    53.269,
+    12.819,
+    53.297
+   ],
+   "depth": false,
+   "bytes": 8807,
+   "core": [
+    12.792,
+    53.269,
+    12.819,
+    53.297
+   ]
+  },
+  "de_mosel": {
+   "title": "Mosel",
+   "bbox": [
+    6.926,
+    49.834,
+    7.317,
+    50.229
+   ],
+   "depth": false,
+   "bytes": 61775,
+   "core": [
+    7.038,
+    49.907,
+    7.206,
+    50.156
+   ]
+  },
+  "de_muehlgraben": {
+   "title": "Mühlgraben",
+   "bbox": [
+    12.486,
+    51.363,
+    12.775,
+    51.544
+   ],
+   "depth": false,
+   "bytes": 27152,
+   "core": [
+    12.601,
+    51.435,
+    12.659,
+    51.472
+   ]
+  },
+  "de_mulde": {
+   "title": "Mulde",
+   "bbox": [
+    12.584,
+    51.141,
+    12.871,
+    51.321
+   ],
+   "depth": false,
+   "bytes": 22042,
+   "core": [
+    12.698,
+    51.213,
+    12.756,
+    51.249
+   ]
+  },
+  "de_neckar_2": {
+   "title": "Neckar",
+   "bbox": [
+    8.556,
+    49.323,
+    8.832,
+    49.504
+   ],
+   "depth": false,
+   "bytes": 29232,
+   "core": [
+    8.667,
+    49.395,
+    8.722,
+    49.432
+   ]
+  },
+  "de_neckar_3": {
+   "title": "Neckar",
+   "bbox": [
+    8.849,
+    49.367,
+    9.126,
+    49.548
+   ],
+   "depth": false,
+   "bytes": 12996,
+   "core": [
+    8.96,
+    49.44,
+    9.015,
+    49.476
+   ]
+  },
+  "de_neckar_4": {
+   "title": "Neckar",
+   "bbox": [
+    9.111,
+    48.534,
+    9.47,
+    49.031
+   ],
+   "depth": false,
+   "bytes": 121420,
+   "core": [
+    9.22,
+    48.606,
+    9.361,
+    48.959
+   ]
+  },
+  "de_neckar_5": {
+   "title": "Neckar",
+   "bbox": [
+    9.066,
+    49.041,
+    9.341,
+    49.222
+   ],
+   "depth": false,
+   "bytes": 22582,
+   "core": [
+    9.176,
+    49.113,
+    9.231,
+    49.15
+   ]
+  },
+  "de_neckar": {
+   "title": "Neckar",
+   "bbox": [
+    8.946,
+    48.432,
+    9.217,
+    48.613
+   ],
+   "depth": false,
+   "bytes": 42367,
+   "core": [
+    9.054,
+    48.505,
+    9.109,
+    48.541
+   ]
+  },
+  "de_nieder_neuendorfer_see": {
+   "title": "Nieder Neuendorfer See",
+   "bbox": [
+    13.198,
+    52.604,
+    13.227,
+    52.631
+   ],
+   "depth": false,
+   "bytes": 7970,
+   "core": [
+    13.198,
+    52.604,
+    13.227,
+    52.631
+   ]
+  },
+  "de_peene": {
+   "title": "Peene",
+   "bbox": [
+    13.539,
+    53.77,
+    13.844,
+    53.951
+   ],
+   "depth": false,
+   "bytes": 32024,
+   "core": [
+    13.661,
+    53.843,
+    13.722,
+    53.879
+   ]
+  },
+  "de_plaetlinsee": {
+   "title": "Plätlinsee",
+   "bbox": [
+    12.966,
+    53.218,
+    13.007,
+    53.252
+   ],
+   "depth": false,
+   "bytes": 3586,
+   "core": [
+    12.966,
+    53.218,
+    13.007,
+    53.252
+   ]
+  },
+  "de_pumpwerkskanal": {
+   "title": "Pumpwerkskanal",
+   "bbox": [
+    8.773,
+    52.191,
+    9.075,
+    52.392
+   ],
+   "depth": false,
+   "bytes": 42535,
+   "core": [
+    8.891,
+    52.263,
+    8.957,
+    52.319
+   ]
+  },
+  "de_reeser_ruderverein_1905_ev_water": {
+   "title": "Reeser Ruderverein 1905 eV water",
+   "bbox": [
+    6.439,
+    51.74,
+    6.468,
+    51.76
+   ],
+   "depth": false,
+   "bytes": 3825,
+   "core": [
+    6.439,
+    51.74,
+    6.468,
+    51.76
+   ]
+  },
+  "de_regattabahn": {
+   "title": "Regattabahn",
+   "bbox": [
+    6.781,
+    51.392,
+    6.803,
+    51.415
+   ],
+   "depth": false,
+   "bytes": 1176,
+   "core": [
+    6.781,
+    51.392,
+    6.803,
+    51.415
+   ]
+  },
+  "de_regattastrecke_oberschleissheim": {
+   "title": "Regattastrecke Oberschleißheim",
+   "bbox": [
+    11.501,
+    48.232,
+    11.53,
+    48.253
+   ],
+   "depth": false,
+   "bytes": 4016,
+   "core": [
+    11.501,
+    48.232,
+    11.53,
+    48.253
+   ]
+  },
+  "de_rhein_2": {
+   "title": "Rhein",
+   "bbox": [
+    8.379,
+    47.488,
+    8.733,
+    47.698
+   ],
+   "depth": false,
+   "bytes": 57196,
+   "core": [
+    8.485,
+    47.56,
+    8.627,
+    47.625
+   ]
+  },
+  "de_rhein_3": {
+   "title": "Rhein",
+   "bbox": [
+    8.244,
+    49.131,
+    8.519,
+    49.312
+   ],
+   "depth": false,
+   "bytes": 53165,
+   "core": [
+    8.354,
+    49.204,
+    8.409,
+    49.24
+   ]
+  },
+  "de_rhein_4": {
+   "title": "Rhein",
+   "bbox": [
+    6.255,
+    51.667,
+    6.545,
+    51.848
+   ],
+   "depth": false,
+   "bytes": 83652,
+   "core": [
+    6.371,
+    51.74,
+    6.429,
+    51.776
+   ]
+  },
+  "de_rhein_5": {
+   "title": "Rhein",
+   "bbox": [
+    8.087,
+    49.882,
+    8.571,
+    50.121
+   ],
+   "depth": false,
+   "bytes": 65885,
+   "core": [
+    8.198,
+    49.955,
+    8.459,
+    50.049
+   ]
+  },
+  "de_rhein_6": {
+   "title": "Rhein",
+   "bbox": [
+    7.882,
+    49.902,
+    8.161,
+    50.083
+   ],
+   "depth": false,
+   "bytes": 37489,
+   "core": [
+    7.994,
+    49.975,
+    8.049,
+    50.011
+   ]
+  },
+  "de_rhein_7": {
+   "title": "Rhein",
+   "bbox": [
+    6.98,
+    50.589,
+    7.321,
+    50.812
+   ],
+   "depth": false,
+   "bytes": 54599,
+   "core": [
+    7.093,
+    50.662,
+    7.208,
+    50.739
+   ]
+  },
+  "de_rhein_8": {
+   "title": "Rhein",
+   "bbox": [
+    7.499,
+    47.45,
+    8.198,
+    47.653
+   ],
+   "depth": false,
+   "bytes": 91969,
+   "core": [
+    7.605,
+    47.523,
+    8.091,
+    47.581
+   ]
+  },
+  "de_rhein": {
+   "title": "Rhein",
+   "bbox": [
+    7.631,
+    49.965,
+    7.911,
+    50.146
+   ],
+   "depth": false,
+   "bytes": 31719,
+   "core": [
+    7.743,
+    50.038,
+    7.799,
+    50.074
+   ]
+  },
+  "de_ruderverein_brombachsee_e_v_water": {
+   "title": "Ruderverein Brombachsee e.V. water",
+   "bbox": [
+    10.888,
+    49.116,
+    10.968,
+    49.147
+   ],
+   "depth": false,
+   "bytes": 8024,
+   "core": [
+    10.888,
+    49.116,
+    10.968,
+    49.147
+   ]
+  },
+  "de_ruderverein_cassel_2010_water": {
+   "title": "Ruderverein Cassel 2010 water",
+   "bbox": [
+    9.486,
+    51.288,
+    9.512,
+    51.304
+   ],
+   "depth": false,
+   "bytes": 3369,
+   "core": [
+    9.486,
+    51.288,
+    9.512,
+    51.304
+   ]
+  },
+  "de_ruppiner_see": {
+   "title": "Ruppiner See",
+   "bbox": [
+    12.797,
+    52.846,
+    12.892,
+    52.952
+   ],
+   "depth": false,
+   "bytes": 14713,
+   "core": [
+    12.797,
+    52.846,
+    12.892,
+    52.952
+   ]
+  },
+  "de_ryck": {
+   "title": "Ryck",
+   "bbox": [
+    13.232,
+    54.008,
+    13.555,
+    54.19
+   ],
+   "depth": false,
+   "bytes": 12466,
+   "core": [
+    13.355,
+    54.081,
+    13.433,
+    54.118
+   ]
+  },
+  "de_saale_2": {
+   "title": "Saale",
+   "bbox": [
+    11.584,
+    51.701,
+    11.875,
+    51.882
+   ],
+   "depth": false,
+   "bytes": 18691,
+   "core": [
+    11.7,
+    51.774,
+    11.758,
+    51.81
+   ]
+  },
+  "de_saale": {
+   "title": "Saale",
+   "bbox": [
+    11.803,
+    51.287,
+    12.14,
+    51.552
+   ],
+   "depth": false,
+   "bytes": 70427,
+   "core": [
+    11.918,
+    51.359,
+    12.024,
+    51.48
+   ]
+  },
+  "de_saar_2": {
+   "title": "Saar",
+   "bbox": [
+    6.227,
+    49.397,
+    6.763,
+    49.835
+   ],
+   "depth": false,
+   "bytes": 104494,
+   "core": [
+    6.338,
+    49.469,
+    6.652,
+    49.763
+   ]
+  },
+  "de_saar": {
+   "title": "Saar",
+   "bbox": [
+    6.866,
+    49.135,
+    7.141,
+    49.316
+   ],
+   "depth": false,
+   "bytes": 29766,
+   "core": [
+    6.976,
+    49.207,
+    7.031,
+    49.244
+   ]
+  },
+  "de_salzgittersee": {
+   "title": "Salzgittersee",
+   "bbox": [
+    10.293,
+    52.145,
+    10.321,
+    52.168
+   ],
+   "depth": false,
+   "bytes": 3762,
+   "core": [
+    10.293,
+    52.145,
+    10.321,
+    52.168
+   ]
+  },
+  "de_schiedersee": {
+   "title": "Schiedersee",
+   "bbox": [
+    9.151,
+    51.916,
+    9.196,
+    51.938
+   ],
+   "depth": false,
+   "bytes": 8788,
+   "core": [
+    9.151,
+    51.916,
+    9.196,
+    51.938
+   ]
+  },
+  "de_schlei": {
+   "title": "Schlei",
+   "bbox": [
+    9.539,
+    54.487,
+    10.041,
+    54.697
+   ],
+   "depth": false,
+   "bytes": 77217,
+   "core": [
+    9.539,
+    54.487,
+    10.041,
+    54.697
+   ]
+  },
+  "de_schunter": {
+   "title": "Schunter",
+   "bbox": [
+    10.364,
+    52.242,
+    10.658,
+    52.423
+   ],
+   "depth": false,
+   "bytes": 56071,
+   "core": [
+    10.482,
+    52.315,
+    10.541,
+    52.351
+   ]
+  },
+  "de_seehafen_leer": {
+   "title": "Seehafen Leer",
+   "bbox": [
+    7.307,
+    53.139,
+    7.607,
+    53.32
+   ],
+   "depth": false,
+   "bytes": 98330,
+   "core": [
+    7.427,
+    53.212,
+    7.487,
+    53.248
+   ]
+  },
+  "de_sieg": {
+   "title": "Sieg",
+   "bbox": [
+    7.519,
+    50.685,
+    7.804,
+    50.866
+   ],
+   "depth": false,
+   "bytes": 25160,
+   "core": [
+    7.633,
+    50.758,
+    7.69,
+    50.794
+   ]
+  },
+  "de_soeste": {
+   "title": "Soeste",
+   "bbox": [
+    7.593,
+    53.075,
+    7.893,
+    53.256
+   ],
+   "depth": false,
+   "bytes": 71580,
+   "core": [
+    7.713,
+    53.148,
+    7.773,
+    53.184
+   ]
+  },
+  "de_spandauer_see": {
+   "title": "Spandauer See",
+   "bbox": [
+    13.203,
+    52.537,
+    13.236,
+    52.566
+   ],
+   "depth": false,
+   "bytes": 17511,
+   "core": [
+    13.203,
+    52.537,
+    13.236,
+    52.566
+   ]
+  },
+  "de_spoykanal": {
+   "title": "Spoykanal",
+   "bbox": [
+    5.995,
+    51.735,
+    6.286,
+    51.916
+   ],
+   "depth": false,
+   "bytes": 45499,
+   "core": [
+    6.112,
+    51.807,
+    6.17,
+    51.843
+   ]
+  },
+  "de_spree": {
+   "title": "Spree",
+   "bbox": [
+    14.105,
+    52.078,
+    14.398,
+    52.259
+   ],
+   "depth": false,
+   "bytes": 40424,
+   "core": [
+    14.223,
+    52.151,
+    14.281,
+    52.187
+   ]
+  },
+  "de_stadtsee": {
+   "title": "Stadtsee",
+   "bbox": [
+    9.749,
+    47.917,
+    9.764,
+    47.927
+   ],
+   "depth": false,
+   "bytes": 989,
+   "core": [
+    9.749,
+    47.917,
+    9.764,
+    47.927
+   ]
+  },
+  "de_stausee_losheim": {
+   "title": "Stausee Losheim",
+   "bbox": [
+    6.72,
+    49.514,
+    6.744,
+    49.525
+   ],
+   "depth": false,
+   "bytes": 1683,
+   "core": [
+    6.72,
+    49.514,
+    6.744,
+    49.525
+   ]
+  },
+  "de_stichkanal_hildesheim": {
+   "title": "Stichkanal Hildesheim",
+   "bbox": [
+    9.783,
+    52.091,
+    10.115,
+    52.397
+   ],
+   "depth": false,
+   "bytes": 38585,
+   "core": [
+    9.9,
+    52.163,
+    9.997,
+    52.325
+   ]
+  },
+  "de_stoer": {
+   "title": "Stör",
+   "bbox": [
+    9.371,
+    53.826,
+    9.676,
+    54.007
+   ],
+   "depth": false,
+   "bytes": 33959,
+   "core": [
+    9.493,
+    53.899,
+    9.554,
+    53.935
+   ]
+  },
+  "de_stoessensee": {
+   "title": "Stößensee",
+   "bbox": [
+    13.203,
+    52.501,
+    13.221,
+    52.515
+   ],
+   "depth": false,
+   "bytes": 5800,
+   "core": [
+    13.203,
+    52.501,
+    13.221,
+    52.515
+   ]
+  },
+  "de_straberg_nievenheimer_see": {
+   "title": "Straberg-Nievenheimer See",
+   "bbox": [
+    6.767,
+    51.095,
+    6.795,
+    51.109
+   ],
+   "depth": false,
+   "bytes": 2000,
+   "core": [
+    6.767,
+    51.095,
+    6.795,
+    51.109
+   ]
+  },
+  "de_stromelbe": {
+   "title": "Stromelbe",
+   "bbox": [
+    11.496,
+    51.935,
+    11.917,
+    52.249
+   ],
+   "depth": false,
+   "bytes": 91215,
+   "core": [
+    11.613,
+    52.008,
+    11.8,
+    52.176
+   ]
+  },
+  "de_tanger": {
+   "title": "Tanger",
+   "bbox": [
+    11.824,
+    52.447,
+    12.119,
+    52.628
+   ],
+   "depth": false,
+   "bytes": 32478,
+   "core": [
+    11.942,
+    52.52,
+    12.001,
+    52.556
+   ]
+  },
+  "de_tegeler_see": {
+   "title": "Tegeler See",
+   "bbox": [
+    13.221,
+    52.556,
+    13.28,
+    52.593
+   ],
+   "depth": false,
+   "bytes": 27371,
+   "core": [
+    13.221,
+    52.556,
+    13.28,
+    52.593
+   ]
+  },
+  "de_templiner_see": {
+   "title": "Templiner See",
+   "bbox": [
+    12.988,
+    52.348,
+    13.043,
+    52.386
+   ],
+   "depth": false,
+   "bytes": 10713,
+   "core": [
+    12.988,
+    52.348,
+    13.043,
+    52.386
+   ]
+  },
+  "de_treene": {
+   "title": "Treene",
+   "bbox": [
+    8.929,
+    54.285,
+    9.237,
+    54.466
+   ],
+   "depth": false,
+   "bytes": 48620,
+   "core": [
+    9.052,
+    54.358,
+    9.114,
+    54.394
+   ]
+  },
+  "de_triebwerkskanal_neustaedtischer_streng_naethewinde": {
+   "title": "Triebwerkskanal Neustädtischer Streng (Näthewinde)",
+   "bbox": [
+    12.278,
+    52.319,
+    12.71,
+    52.503
+   ],
+   "depth": false,
+   "bytes": 96503,
+   "core": [
+    12.396,
+    52.391,
+    12.592,
+    52.431
+   ]
+  },
+  "de_unterbacher_see": {
+   "title": "Unterbacher See",
+   "bbox": [
+    6.872,
+    51.189,
+    6.914,
+    51.202
+   ],
+   "depth": false,
+   "bytes": 4437,
+   "core": [
+    6.872,
+    51.189,
+    6.914,
+    51.202
+   ]
+  },
+  "de_untreusee": {
+   "title": "Untreusee",
+   "bbox": [
+    11.898,
+    50.267,
+    11.919,
+    50.289
+   ],
+   "depth": false,
+   "bytes": 2352,
+   "core": [
+    11.898,
+    50.267,
+    11.919,
+    50.289
+   ]
+  },
+  "de_vieux_rhin_altrhein": {
+   "title": "Vieux Rhin / Altrhein",
+   "bbox": [
+    7.454,
+    47.929,
+    7.722,
+    48.111
+   ],
+   "depth": false,
+   "bytes": 31083,
+   "core": [
+    7.561,
+    48.002,
+    7.615,
+    48.038
+   ]
+  },
+  "de_wakenitzdueker": {
+   "title": "Wakenitzdüker",
+   "bbox": [
+    10.529,
+    53.765,
+    10.861,
+    54.001
+   ],
+   "depth": false,
+   "bytes": 126305,
+   "core": [
+    10.651,
+    53.837,
+    10.74,
+    53.929
+   ]
+  },
+  "de_werre": {
+   "title": "Werre",
+   "bbox": [
+    8.538,
+    52.013,
+    8.83,
+    52.194
+   ],
+   "depth": false,
+   "bytes": 30133,
+   "core": [
+    8.655,
+    52.086,
+    8.713,
+    52.122
+   ]
+  },
+  "de_wesel_datteln_kanal": {
+   "title": "Wesel-Datteln-Kanal",
+   "bbox": [
+    6.783,
+    51.57,
+    7.073,
+    51.751
+   ],
+   "depth": false,
+   "bytes": 49321,
+   "core": [
+    6.899,
+    51.643,
+    6.957,
+    51.679
+   ]
+  },
+  "de_weser": {
+   "title": "Weser",
+   "bbox": [
+    9.057,
+    52.545,
+    9.353,
+    52.726
+   ],
+   "depth": false,
+   "bytes": 29840,
+   "core": [
+    9.176,
+    52.617,
+    9.235,
+    52.654
+   ]
+  },
+  "de_ziegelsee": {
+   "title": "Ziegelsee",
+   "bbox": [
+    10.667,
+    53.622,
+    10.689,
+    53.634
+   ],
+   "depth": false,
+   "bytes": 3165,
+   "core": [
+    10.667,
+    53.622,
+    10.689,
+    53.634
+   ]
+  },
+  "gb_chadbury": {
+   "title": "chadbury",
+   "bbox": [
+    -2.092,
+    51.999,
+    -1.8,
+    52.18
+   ],
+   "depth": false,
+   "bytes": 26167,
+   "core": [
+    -1.975,
+    52.071,
+    -1.917,
+    52.108
+   ]
+  },
+  "gb_city_of_swansea_rowing_club_water": {
+   "title": "City of Swansea Rowing Club water",
+   "bbox": [
+    -3.935,
+    51.615,
+    -3.913,
+    51.623
+   ],
+   "depth": false,
+   "bytes": 1370,
+   "core": [
+    -3.935,
+    51.615,
+    -3.913,
+    51.623
+   ]
+  },
+  "gb_delapre_lake": {
+   "title": "Delapre Lake",
+   "bbox": [
+    -0.888,
+    52.222,
+    -0.868,
+    52.23
+   ],
+   "depth": false,
+   "bytes": 1176,
+   "core": [
+    -0.888,
+    52.222,
+    -0.868,
+    52.23
+   ]
+  },
+  "gb_derwent_water": {
+   "title": "Derwent Water",
+   "bbox": [
+    -3.165,
+    54.555,
+    -3.127,
+    54.602
+   ],
+   "depth": false,
+   "bytes": 13444,
+   "core": [
+    -3.165,
+    54.555,
+    -3.127,
+    54.602
+   ]
+  },
+  "gb_exeter_ship_canal": {
+   "title": "Exeter Ship Canal",
+   "bbox": [
+    -3.671,
+    50.626,
+    -3.388,
+    50.807
+   ],
+   "depth": false,
+   "bytes": 36610,
+   "core": [
+    -3.558,
+    50.698,
+    -3.501,
+    50.734
+   ]
+  },
+  "gb_gloucester_and_sharpness_canal": {
+   "title": "Gloucester and Sharpness Canal",
+   "bbox": [
+    -2.41,
+    51.754,
+    -2.119,
+    51.935
+   ],
+   "depth": false,
+   "bytes": 33817,
+   "core": [
+    -2.294,
+    51.827,
+    -2.235,
+    51.863
+   ]
+  },
+  "gb_hollingworth_lake": {
+   "title": "Hollingworth Lake",
+   "bbox": [
+    -2.109,
+    53.624,
+    -2.084,
+    53.636
+   ],
+   "depth": false,
+   "bytes": 1642,
+   "core": [
+    -2.109,
+    53.624,
+    -2.084,
+    53.636
+   ]
+  },
+  "gb_inner_harbour": {
+   "title": "Inner Harbour",
+   "bbox": [
+    -5.078,
+    50.149,
+    -5.052,
+    50.165
+   ],
+   "depth": false,
+   "bytes": 3955,
+   "core": [
+    -5.078,
+    50.149,
+    -5.052,
+    50.165
+   ]
+  },
+  "gb_manchester_ship_canal": {
+   "title": "Manchester Ship Canal",
+   "bbox": [
+    -2.44,
+    53.38,
+    -2.138,
+    53.561
+   ],
+   "depth": false,
+   "bytes": 95242,
+   "core": [
+    -2.319,
+    53.453,
+    -2.259,
+    53.489
+   ]
+  },
+  "gb_medway": {
+   "title": "Medway",
+   "bbox": [
+    0.233,
+    51.188,
+    0.661,
+    51.535
+   ],
+   "depth": false,
+   "bytes": 71323,
+   "core": [
+    0.348,
+    51.261,
+    0.546,
+    51.463
+   ]
+  },
+  "gb_redgrave_pinsent_rowing_lake": {
+   "title": "Redgrave Pinsent Rowing Lake",
+   "bbox": [
+    -0.951,
+    51.457,
+    -0.916,
+    51.482
+   ],
+   "depth": false,
+   "bytes": 6897,
+   "core": [
+    -0.951,
+    51.457,
+    -0.916,
+    51.482
+   ]
+  },
+  "gb_regatta_lake_water": {
+   "title": "Regatta Lake water",
+   "bbox": [
+    -1.102,
+    52.931,
+    -1.074,
+    52.943
+   ],
+   "depth": false,
+   "bytes": 1082,
+   "core": [
+    -1.102,
+    52.931,
+    -1.074,
+    52.943
+   ]
+  },
+  "gb_river_avon": {
+   "title": "River Avon",
+   "bbox": [
+    -2.684,
+    51.301,
+    -2.181,
+    51.537
+   ],
+   "depth": false,
+   "bytes": 123955,
+   "core": [
+    -2.569,
+    51.374,
+    -2.296,
+    51.464
+   ]
+  },
+  "gb_river_cam": {
+   "title": "River Cam",
+   "bbox": [
+    -0.017,
+    52.12,
+    0.287,
+    52.302
+   ],
+   "depth": false,
+   "bytes": 22081,
+   "core": [
+    0.1,
+    52.193,
+    0.169,
+    52.23
+   ]
+  },
+  "gb_river_clyde_2": {
+   "title": "River Clyde",
+   "bbox": [
+    -4.404,
+    55.753,
+    -4.081,
+    55.942
+   ],
+   "depth": false,
+   "bytes": 67517,
+   "core": [
+    -4.276,
+    55.825,
+    -4.209,
+    55.87
+   ]
+  },
+  "gb_river_clyde": {
+   "title": "River Clyde",
+   "bbox": [
+    -4.182,
+    55.695,
+    -3.863,
+    55.876
+   ],
+   "depth": false,
+   "bytes": 49003,
+   "core": [
+    -4.055,
+    55.768,
+    -3.991,
+    55.804
+   ]
+  },
+  "gb_river_dart": {
+   "title": "River Dart",
+   "bbox": [
+    -3.819,
+    50.335,
+    -3.537,
+    50.516
+   ],
+   "depth": false,
+   "bytes": 40738,
+   "core": [
+    -3.707,
+    50.407,
+    -3.65,
+    50.443
+   ]
+  },
+  "gb_river_dee_2": {
+   "title": "River Dee",
+   "bbox": [
+    -2.26,
+    57.046,
+    -1.929,
+    57.227
+   ],
+   "depth": false,
+   "bytes": 16215,
+   "core": [
+    -2.127,
+    57.118,
+    -2.061,
+    57.154
+   ]
+  },
+  "gb_river_dee": {
+   "title": "River Dee",
+   "bbox": [
+    -3.032,
+    53.098,
+    -2.731,
+    53.28
+   ],
+   "depth": false,
+   "bytes": 37206,
+   "core": [
+    -2.912,
+    53.171,
+    -2.851,
+    53.207
+   ]
+  },
+  "gb_river_derwent": {
+   "title": "River Derwent",
+   "bbox": [
+    -1.628,
+    52.841,
+    -1.329,
+    53.022
+   ],
+   "depth": false,
+   "bytes": 67442,
+   "core": [
+    -1.508,
+    52.913,
+    -1.449,
+    52.95
+   ]
+  },
+  "gb_river_great_ouse_2": {
+   "title": "River Great Ouse",
+   "bbox": [
+    -0.617,
+    52.042,
+    -0.308,
+    52.225
+   ],
+   "depth": false,
+   "bytes": 35333,
+   "core": [
+    -0.5,
+    52.115,
+    -0.425,
+    52.153
+   ]
+  },
+  "gb_river_great_ouse": {
+   "title": "River Great Ouse",
+   "bbox": [
+    -0.419,
+    52.139,
+    -0.126,
+    52.32
+   ],
+   "depth": false,
+   "bytes": 35509,
+   "core": [
+    -0.302,
+    52.211,
+    -0.243,
+    52.247
+   ]
+  },
+  "gb_river_lune": {
+   "title": "River Lune",
+   "bbox": [
+    -2.949,
+    53.972,
+    -2.607,
+    54.165
+   ],
+   "depth": false,
+   "bytes": 51677,
+   "core": [
+    -2.826,
+    54.044,
+    -2.73,
+    54.093
+   ]
+  },
+  "gb_river_medina": {
+   "title": "River Medina",
+   "bbox": [
+    -1.432,
+    50.62,
+    -1.148,
+    50.801
+   ],
+   "depth": false,
+   "bytes": 18714,
+   "core": [
+    -1.318,
+    50.693,
+    -1.261,
+    50.729
+   ]
+  },
+  "gb_river_nene": {
+   "title": "River Nene",
+   "bbox": [
+    -0.618,
+    52.373,
+    -0.123,
+    52.66
+   ],
+   "depth": false,
+   "bytes": 72407,
+   "core": [
+    -0.5,
+    52.445,
+    -0.241,
+    52.588
+   ]
+  },
+  "gb_river_nith": {
+   "title": "River Nith",
+   "bbox": [
+    -3.773,
+    54.981,
+    -3.459,
+    55.162
+   ],
+   "depth": false,
+   "bytes": 15487,
+   "core": [
+    -3.647,
+    55.053,
+    -3.585,
+    55.09
+   ]
+  },
+  "gb_river_ouse": {
+   "title": "River Ouse",
+   "bbox": [
+    -1.241,
+    53.847,
+    -0.928,
+    54.05
+   ],
+   "depth": false,
+   "bytes": 45770,
+   "core": [
+    -1.119,
+    53.919,
+    -1.05,
+    53.978
+   ]
+  },
+  "gb_river_severn_2": {
+   "title": "River Severn",
+   "bbox": [
+    -2.912,
+    52.614,
+    -2.612,
+    52.796
+   ],
+   "depth": false,
+   "bytes": 42964,
+   "core": [
+    -2.793,
+    52.686,
+    -2.731,
+    52.723
+   ]
+  },
+  "gb_river_severn_3": {
+   "title": "River Severn",
+   "bbox": [
+    -2.462,
+    52.246,
+    -2.136,
+    52.468
+   ],
+   "depth": false,
+   "bytes": 61139,
+   "core": [
+    -2.345,
+    52.318,
+    -2.253,
+    52.396
+   ]
+  },
+  "gb_river_severn": {
+   "title": "River Severn",
+   "bbox": [
+    -2.379,
+    51.975,
+    -2.064,
+    52.286
+   ],
+   "depth": false,
+   "bytes": 59728,
+   "core": [
+    -2.262,
+    52.048,
+    -2.181,
+    52.214
+   ]
+  },
+  "gb_river_soar": {
+   "title": "River Soar",
+   "bbox": [
+    -1.406,
+    52.715,
+    -1.109,
+    52.896
+   ],
+   "depth": false,
+   "bytes": 58190,
+   "core": [
+    -1.288,
+    52.787,
+    -1.228,
+    52.823
+   ]
+  },
+  "gb_river_stour": {
+   "title": "River Stour",
+   "bbox": [
+    0.583,
+    51.944,
+    0.875,
+    52.125
+   ],
+   "depth": false,
+   "bytes": 28384,
+   "core": [
+    0.699,
+    52.016,
+    0.758,
+    52.053
+   ]
+  },
+  "gb_river_taff": {
+   "title": "River Taff",
+   "bbox": [
+    -3.369,
+    51.407,
+    -3.08,
+    51.588
+   ],
+   "depth": false,
+   "bytes": 62208,
+   "core": [
+    -3.253,
+    51.48,
+    -3.195,
+    51.516
+   ]
+  },
+  "gb_river_tees": {
+   "title": "River Tees",
+   "bbox": [
+    -1.458,
+    54.476,
+    -1.148,
+    54.657
+   ],
+   "depth": false,
+   "bytes": 28325,
+   "core": [
+    -1.334,
+    54.548,
+    -1.272,
+    54.585
+   ]
+  },
+  "gb_river_thames": {
+   "title": "River Thames",
+   "bbox": [
+    -0.453,
+    51.33,
+    0.14,
+    51.581
+   ],
+   "depth": false,
+   "bytes": 210278,
+   "core": [
+    -0.338,
+    51.403,
+    0.025,
+    51.509
+   ]
+  },
+  "gb_river_trent_2": {
+   "title": "River Trent",
+   "bbox": [
+    -1.284,
+    52.848,
+    -0.985,
+    53.03
+   ],
+   "depth": false,
+   "bytes": 54367,
+   "core": [
+    -1.164,
+    52.921,
+    -1.105,
+    52.957
+   ]
+  },
+  "gb_river_trent": {
+   "title": "River Trent",
+   "bbox": [
+    -1.769,
+    52.714,
+    -1.471,
+    52.896
+   ],
+   "depth": false,
+   "bytes": 51845,
+   "core": [
+    -1.65,
+    52.786,
+    -1.59,
+    52.823
+   ]
+  },
+  "gb_river_tyne": {
+   "title": "River Tyne",
+   "bbox": [
+    -1.903,
+    54.89,
+    -1.588,
+    55.073
+   ],
+   "depth": false,
+   "bytes": 26118,
+   "core": [
+    -1.778,
+    54.963,
+    -1.714,
+    55.0
+   ]
+  },
+  "gb_river_wansbeck": {
+   "title": "River Wansbeck",
+   "bbox": [
+    -1.728,
+    55.076,
+    -1.413,
+    55.257
+   ],
+   "depth": false,
+   "bytes": 8529,
+   "core": [
+    -1.602,
+    55.149,
+    -1.539,
+    55.185
+   ]
+  },
+  "gb_river_wear": {
+   "title": "River Wear",
+   "bbox": [
+    -1.724,
+    54.683,
+    -1.285,
+    55.002
+   ],
+   "depth": false,
+   "bytes": 67749,
+   "core": [
+    -1.599,
+    54.756,
+    -1.409,
+    54.929
+   ]
+  },
+  "gb_river_weaver": {
+   "title": "River Weaver",
+   "bbox": [
+    -2.863,
+    53.161,
+    -2.366,
+    53.479
+   ],
+   "depth": false,
+   "bytes": 142844,
+   "core": [
+    -2.743,
+    53.233,
+    -2.486,
+    53.407
+   ]
+  },
+  "gb_river_wey_navigation": {
+   "title": "River Wey Navigation",
+   "bbox": [
+    -1.039,
+    51.25,
+    -0.181,
+    51.657
+   ],
+   "depth": false,
+   "bytes": 386046,
+   "core": [
+    -0.924,
+    51.323,
+    -0.297,
+    51.585
+   ]
+  },
+  "gb_river_witham": {
+   "title": "River Witham",
+   "bbox": [
+    -0.186,
+    52.895,
+    0.112,
+    53.076
+   ],
+   "depth": false,
+   "bytes": 31125,
+   "core": [
+    -0.067,
+    52.968,
+    -0.007,
+    53.004
+   ]
+  },
+  "gb_river_wye_2": {
+   "title": "River Wye",
+   "bbox": [
+    -2.854,
+    51.723,
+    -2.444,
+    52.008
+   ],
+   "depth": false,
+   "bytes": 54082,
+   "core": [
+    -2.737,
+    51.795,
+    -2.56,
+    51.936
+   ]
+  },
+  "gb_river_wye": {
+   "title": "River Wye",
+   "bbox": [
+    -2.868,
+    51.962,
+    -2.576,
+    52.143
+   ],
+   "depth": false,
+   "bytes": 29500,
+   "core": [
+    -2.751,
+    52.034,
+    -2.693,
+    52.07
+   ]
+  },
+  "gb_river_yare": {
+   "title": "River Yare",
+   "bbox": [
+    1.188,
+    52.535,
+    1.484,
+    52.716
+   ],
+   "depth": false,
+   "bytes": 63034,
+   "core": [
+    1.306,
+    52.608,
+    1.365,
+    52.644
+   ]
+  },
+  "gb_river_yealm": {
+   "title": "River Yealm",
+   "bbox": [
+    -4.182,
+    50.22,
+    -3.9,
+    50.401
+   ],
+   "depth": false,
+   "bytes": 15932,
+   "core": [
+    -4.069,
+    50.292,
+    -4.013,
+    50.328
+   ]
+  },
+  "gb_royal_victoria_dock": {
+   "title": "Royal Victoria Dock",
+   "bbox": [
+    0.013,
+    51.503,
+    0.044,
+    51.511
+   ],
+   "depth": false,
+   "bytes": 2106,
+   "core": [
+    0.013,
+    51.503,
+    0.044,
+    51.511
+   ]
+  },
+  "gb_stratford_on_avon": {
+   "title": "Stratford-on-Avon",
+   "bbox": [
+    -1.848,
+    52.1,
+    -1.555,
+    52.281
+   ],
+   "depth": false,
+   "bytes": 38056,
+   "core": [
+    -1.731,
+    52.173,
+    -1.672,
+    52.209
+   ]
+  },
+  "gb_union_canal": {
+   "title": "Union Canal",
+   "bbox": [
+    -3.393,
+    55.837,
+    -3.068,
+    56.019
+   ],
+   "depth": false,
+   "bytes": 50479,
+   "core": [
+    -3.265,
+    55.909,
+    -3.196,
+    55.947
+   ]
+  },
+  "gb_warwick_reservoir_east": {
+   "title": "Warwick Reservoir East",
+   "bbox": [
+    -0.063,
+    51.573,
+    -0.048,
+    51.586
+   ],
+   "depth": false,
+   "bytes": 4405,
+   "core": [
+    -0.063,
+    51.573,
+    -0.048,
+    51.586
+   ]
+  },
+  "gb_weirs_mill_stream": {
+   "title": "Weirs Mill Stream",
+   "bbox": [
+    -1.442,
+    51.376,
+    -0.754,
+    51.87
+   ],
+   "depth": false,
+   "bytes": 231626,
+   "core": [
+    -1.327,
+    51.448,
+    -0.87,
+    51.798
+   ]
+  },
+  "ie_abbey": {
+   "title": "Abbey",
+   "bbox": [
+    -8.778,
+    52.575,
+    -8.436,
+    52.766
+   ],
+   "depth": false,
+   "bytes": 29866,
+   "core": [
+    -8.659,
+    52.647,
+    -8.554,
+    52.694
+   ]
+  },
+  "ie_barrow_2": {
+   "title": "Barrow",
+   "bbox": [
+    -7.099,
+    52.45,
+    -6.804,
+    52.632
+   ],
+   "depth": false,
+   "bytes": 20109,
+   "core": [
+    -6.981,
+    52.523,
+    -6.922,
+    52.559
+   ]
+  },
+  "ie_barrow": {
+   "title": "Barrow",
+   "bbox": [
+    -7.084,
+    52.747,
+    -6.787,
+    52.928
+   ],
+   "depth": false,
+   "bytes": 14680,
+   "core": [
+    -6.965,
+    52.819,
+    -6.906,
+    52.855
+   ]
+  },
+  "ie_distillery_river": {
+   "title": "Distillery River",
+   "bbox": [
+    -9.209,
+    53.187,
+    -8.904,
+    53.37
+   ],
+   "depth": false,
+   "bytes": 19172,
+   "core": [
+    -9.088,
+    53.259,
+    -9.024,
+    53.297
+   ]
+  },
+  "ie_grand_canal": {
+   "title": "Grand Canal",
+   "bbox": [
+    -7.55,
+    53.189,
+    -7.25,
+    53.37
+   ],
+   "depth": false,
+   "bytes": 10010,
+   "core": [
+    -7.43,
+    53.262,
+    -7.37,
+    53.298
+   ]
+  },
+  "ie_inniscarra_reservoir": {
+   "title": "Inniscarra Reservoir",
+   "bbox": [
+    -8.856,
+    51.889,
+    -8.656,
+    51.916
+   ],
+   "depth": false,
+   "bytes": 9354,
+   "core": [
+    -8.856,
+    51.889,
+    -8.656,
+    51.916
+   ]
+  },
+  "ie_john_s_river": {
+   "title": "John's River",
+   "bbox": [
+    -7.249,
+    52.168,
+    -6.956,
+    52.349
+   ],
+   "depth": false,
+   "bytes": 22659,
+   "core": [
+    -7.132,
+    52.24,
+    -7.073,
+    52.277
+   ]
+  },
+  "ie_liffey": {
+   "title": "Liffey",
+   "bbox": [
+    -6.472,
+    53.253,
+    -6.066,
+    53.437
+   ],
+   "depth": false,
+   "bytes": 52893,
+   "core": [
+    -6.352,
+    53.325,
+    -6.187,
+    53.365
+   ]
+  },
+  "ie_poulaphouca_reservoir": {
+   "title": "Poulaphouca Reservoir",
+   "bbox": [
+    -6.588,
+    53.086,
+    -6.473,
+    53.183
+   ],
+   "depth": false,
+   "bytes": 12762,
+   "core": [
+    -6.588,
+    53.086,
+    -6.473,
+    53.183
+   ]
+  },
+  "ie_river_lee": {
+   "title": "River Lee",
+   "bbox": [
+    -8.59,
+    51.808,
+    -8.266,
+    51.992
+   ],
+   "depth": false,
+   "bytes": 18505,
+   "core": [
+    -8.474,
+    51.88,
+    -8.382,
+    51.92
+   ]
+  },
+  "ie_shannon": {
+   "title": "Shannon",
+   "bbox": [
+    -8.249,
+    53.854,
+    -7.944,
+    54.035
+   ],
+   "depth": false,
+   "bytes": 35620,
+   "core": [
+    -8.127,
+    53.926,
+    -8.066,
+    53.962
+   ]
   }
  }
 }

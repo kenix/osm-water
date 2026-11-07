@@ -15,6 +15,7 @@ history are in every clone for ever.
 | File | What it is |
 |---|---|
 | `waters.sh` | Fetches the sources and builds every file of a release into `out/`, then writes `manifest.json` |
+| `survey.py` | Every other water: the lake or river each `sport=rowing` object in OSM is on, one file per lake and per stretch of river around a group of clubs, into `generated.txt` |
 | `lake.sh` | One water: OSM extract (`osmium-tool`), then the Python steps below |
 | `clip.py` | A river stretch: its `natural=water` polygons clipped to the bbox |
 | `measure.py` | The details on and around the water, by category |
@@ -27,12 +28,20 @@ history are in every clone for ever.
 
 Building needs `osmium-tool`, Python 3 (standard library only), `curl` and
 `unzip`: `./waters.sh water-YYYY-MM-DD`, then upload `out/*` to that release.
-A new water is a line in `WATERS` in `waters.sh`.
+The countries are `COUNTRIES` in `waters.sh` (Geofabrik extracts, 7 GB for
+CH, DE, AT, GB and IE; a run takes about an hour). The waters by hand are
+`WATERS` there (a depth grid, a better title, a box cut by hand); every other
+club gets its water from `survey.py`. Clubs on the sea (coastline, not
+`natural=water`) get none yet; `generated.txt.none` lists them. `ONLY=<slug>`
+builds one water, `KEEP=1` skips those already in `out/`, `JOBS` sets how
+many build at once (6).
 
 ## Using it
 
 `manifest.json` names the release, the download `base` and every water with
-its `bbox` (`[w, s, e, n]`). Release assets send no CORS headers, so a browser
+its `bbox` (`[w, s, e, n]`) and, where boxes overlap, its `core`: the part
+around its own clubs where it wins over a neighbour (the smallest core holding
+a point first, then the smallest box). Release assets send no CORS headers, so a browser
 reads them through a server of its own (Crewbook: slipway's `/v1/water`).
 
 Every file is gzip of UTF-8 JSON. Coordinates are `[lat, lng]`.

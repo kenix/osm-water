@@ -16,7 +16,7 @@ done
 osmium merge "${parts[@]}" -o "$W/area.pbf" -O
 # a river's own polygons become the water area, so keep them out of the details
 river=; [[ $name == *=* ]] && river=1
-x() { osmium tags-filter "$W/area.pbf" "${@:2}" -o "$W/$1.pbf" -O && osmium export "$W/$1.pbf" -o "$W/$1.geojson" -O; }
+x() { osmium tags-filter "$W/area.pbf" "${@:2}" -o "$W/$1.pbf" -O && osmium export "$W/$1.pbf" -u type_id -o "$W/$1.geojson" -O; }
 x lake nwr/natural=water
 if [ -n "$river" ]; then
   python3 -I "$S/clip.py" "$W/lake.geojson" "$name" "$bbox" "$W/river.geojson"
