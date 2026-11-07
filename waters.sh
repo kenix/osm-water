@@ -66,6 +66,9 @@ WATERS=(
 )
 printf '%s\n' "${WATERS[@]}" > work/hand.txt
 python3 -I survey.py work/hand.txt generated.txt "${survey[@]}"
+# the coastline as polygons (osmdata.openstreetmap.de, ODbL), for the clubs on the sea
+get https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip src/water-polygons-split-4326.zip
+python3 -I sea.py src/water-polygons-split-4326.zip generated.txt
 while IFS= read -r line; do WATERS+=("$line"); done < generated.txt
 one() {
   IFS='|' read -r slug name bbox bathy src title core <<< "$1"

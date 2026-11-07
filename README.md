@@ -16,6 +16,7 @@ history are in every clone for ever.
 |---|---|
 | `waters.sh` | Fetches the sources and builds every file of a release into `out/`, then writes `manifest.json` |
 | `survey.py` | Every other water: the lake or river each object in OSM with `rowing` in its `sport` list is on, one file per lake and per stretch of river around a group of clubs, into `generated.txt` |
+| `sea.py` | The clubs on the sea: those survey.py found no water for that lie within 2 km of the coast, grouped like river clubs; each group's sea 20 km along the coast and 5 km out, from the OSM coastline as polygons (osmdata.openstreetmap.de), appended to `generated.txt` with the selector `sea` |
 | `lake.sh` | One water: OSM extract (`osmium-tool`), then the Python steps below |
 | `clip.py` | A river stretch: its `natural=water` polygons clipped to the bbox |
 | `measure.py` | The details on and around the water, by category |
@@ -32,7 +33,8 @@ The countries are `COUNTRIES` in `waters.sh` (Geofabrik extracts, 7 GB for
 CH, DE, AT, GB and IE; a run takes about an hour). The waters by hand are
 `WATERS` there (a depth grid, a better title, a box cut by hand); every other
 club gets its water from `survey.py`. Clubs on the sea (coastline, not
-`natural=water`) get none yet; `generated.txt.none` lists them. `ONLY=<slug>`
+`natural=water`) get a strip of sea from `sea.py`; `generated.txt.none` lists
+every club survey.py found no water for, the input of `sea.py`. `ONLY=<slug>`
 builds one water, `KEEP=1` skips those already in `out/`, `JOBS` sets how
 many build at once (6).
 

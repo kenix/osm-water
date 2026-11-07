@@ -265,10 +265,12 @@ def main():
                 add(cs[g[0]]['cc'], name, f'@id={wid}', box(ps, MARGIN), name, box(ps, CORE))
 
     rivers = [c for c in gen if c['water']['kind'] == 'river']
+    sea = []  # clubs on harbours alone: the sea's, listed with the clubs on no water for sea.py
     for g in clusters([c['p'] for c in rivers]):
         cs = [rivers[i] for i in g]
         if all(c['water']['harbour'] for c in cs):
-            continue  # harbours alone are the sea's (Kiel); a sea club waits for the coast
+            sea += cs  # harbours alone are the sea's (Kiel)
+            continue
         names = [c['water']['name'] for c in cs if c['water']['name']]
         ps = [c['p'] for c in cs]
         name = max(set(names), key=names.count) if names else river_name(ps)
@@ -289,7 +291,7 @@ def main():
     print(len(lines), 'waters:', sum('@id=' in l for l in lines), 'lakes,', sum('water=' in l for l in lines), 'river stretches')
     with open(out_path + '.none', 'w', encoding='utf-8') as f:
         for c in clubs:
-            if not c['water']:
+            if not c['water'] or c in sea:
                 f.write(f"{c['cc']}\t{c['p'][1]:.5f},{c['p'][0]:.5f}\t{c['id']}\t{c['name']}\n")
 
 

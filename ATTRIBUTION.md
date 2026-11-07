@@ -9,10 +9,11 @@ Contains information from **OpenStreetMap**, © OpenStreetMap contributors,
 made available under the **Open Database License (ODbL) 1.0**.
 
 - Source: https://www.openstreetmap.org, via the Geofabrik extracts at
-  https://download.geofabrik.de
+  https://download.geofabrik.de, and the coastline as water polygons from
+  https://osmdata.openstreetmap.de/data/water-polygons.html
 - Licence: https://opendatacommons.org/licenses/odbl/1-0/
 - Copyright and attribution: https://www.openstreetmap.org/copyright
-- Modifications: cut to one lake or river stretch; outlines simplified to
+- Modifications: cut to one lake, river stretch or strip of sea; outlines simplified to
   1 m; reduced to the categories in `README.md`; labels placed at a
   feature's centre.
 

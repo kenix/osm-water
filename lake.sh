@@ -1,6 +1,6 @@
 #!/bin/bash
 # One lake or river stretch from OSM (and swissBATHY3D when given) into out/<slug>.json.gz.
-# Usage: lake.sh <slug> <OSM lake name | key=v1,v2 for a river stretch> <bbox w,s,e,n> [<bathy dir> <lake level m>]
+# Usage: lake.sh <slug> <OSM lake name | key=v1,v2 for a river stretch | sea (work/sea/<slug>.geojson)> <bbox w,s,e,n> [<bathy dir> <lake level m>]
 # SRC: space-separated source extracts (default the Swiss one); a border river needs both sides.
 set -euo pipefail
 S=$(cd "$(dirname "$0")" && pwd)
@@ -17,7 +17,11 @@ osmium merge "${parts[@]}" -o "$W/area.pbf" -O
 # a river's own polygons become the water area, so keep them out of the details
 river=; [[ $name == *=* ]] && river=1
 x() { osmium tags-filter "$W/area.pbf" "${@:2}" -o "$W/$1.pbf" -O && osmium export "$W/$1.pbf" -u type_id -o "$W/$1.geojson" -O; }
-x lake nwr/natural=water
+if [ "$name" = sea ]; then  # sea.py cut it from the coastline; drawn like a river, without a shore
+  cp "$S/work/sea/$slug.geojson" "$W/lake.geojson"; name=water
+else
+  x lake nwr/natural=water
+fi
 if [ -n "$river" ]; then
   # one lake by id keeps its name (TITLE), so it is drawn with a shore; a stretch is 'water'
   label=water; [[ $name == @id=* && $name != *\;* && -n ${TITLE:-} ]] && label=$TITLE
