@@ -1,7 +1,7 @@
 {
- "release": "water-2026-11-07",
+ "release": "water-2026-11-14",
  "format": 1,
- "base": "https://github.com/kenix/osm-water/releases/download/water-2026-11-07/",
+ "base": "https://github.com/kenix/osm-water/releases/download/water-2026-11-14/",
  "licence": "ODbL-1.0",
  "attribution": "© OpenStreetMap contributors",
  "orient": {
@@ -86,6 +86,182 @@
    ],
    "depth": false,
    "bytes": 26254
+  },
+  "sihlsee": {
+   "title": "Sihlsee",
+   "bbox": [
+    8.74,
+    47.07,
+    8.83,
+    47.165
+   ],
+   "depth": false,
+   "bytes": 20180
+  },
+  "aegerisee": {
+   "title": "Ägerisee",
+   "bbox": [
+    8.575,
+    47.09,
+    8.655,
+    47.15
+   ],
+   "depth": true,
+   "bytes": 30096
+  },
+  "hallwilersee": {
+   "title": "Hallwilersee",
+   "bbox": [
+    8.185,
+    47.235,
+    8.245,
+    47.33
+   ],
+   "depth": true,
+   "bytes": 23908
+  },
+  "brienzersee": {
+   "title": "Brienzersee",
+   "bbox": [
+    7.86,
+    46.675,
+    8.07,
+    46.775
+   ],
+   "depth": true,
+   "bytes": 105369
+  },
+  "aare_olten_aarburg": {
+   "title": "Aare: Olten to Aarburg",
+   "bbox": [
+    7.84,
+    47.3,
+    7.98,
+    47.38
+   ],
+   "depth": false,
+   "bytes": 11462
+  },
+  "bodensee_untersee": {
+   "title": "Bodensee: Untersee",
+   "bbox": [
+    8.84,
+    47.63,
+    9.12,
+    47.74
+   ],
+   "depth": true,
+   "bytes": 113571
+  },
+  "bielersee": {
+   "title": "Bielersee",
+   "bbox": [
+    7.06,
+    47.025,
+    7.27,
+    47.15
+   ],
+   "depth": true,
+   "bytes": 127219
+  },
+  "murtensee": {
+   "title": "Murtensee",
+   "bbox": [
+    7.02,
+    46.895,
+    7.145,
+    46.97
+   ],
+   "depth": true,
+   "bytes": 34073
+  },
+  "lac_de_joux": {
+   "title": "Lac de Joux",
+   "bbox": [
+    6.23,
+    46.6,
+    6.34,
+    46.68
+   ],
+   "depth": true,
+   "bytes": 39989
+  },
+  "leman_petit_lac": {
+   "title": "Léman: Petit-Lac",
+   "bbox": [
+    6.1,
+    46.18,
+    6.3,
+    46.3
+   ],
+   "depth": true,
+   "bytes": 73776
+  },
+  "leman_haut_lac": {
+   "title": "Léman: Haut-Lac",
+   "bbox": [
+    6.69,
+    46.37,
+    6.97,
+    46.52
+   ],
+   "depth": true,
+   "bytes": 107801
+  },
+  "lago_di_lugano": {
+   "title": "Lago di Lugano",
+   "bbox": [
+    8.84,
+    45.89,
+    9.14,
+    46.05
+   ],
+   "depth": false,
+   "bytes": 42032
+  },
+  "lago_maggiore": {
+   "title": "Lago Maggiore",
+   "bbox": [
+    8.62,
+    45.95,
+    8.92,
+    46.2
+   ],
+   "depth": true,
+   "bytes": 76815
+  },
+  "ch_sarnersee": {
+   "title": "Sarnersee",
+   "bbox": [
+    8.175,
+    46.835,
+    8.26,
+    46.91
+   ],
+   "depth": false,
+   "bytes": 8846
+  },
+  "ch_sempachersee": {
+   "title": "Sempachersee",
+   "bbox": [
+    8.1,
+    47.105,
+    8.2,
+    47.185
+   ],
+   "depth": false,
+   "bytes": 7270
+  },
+  "ch_schiffenensee": {
+   "title": "Schiffenensee",
+   "bbox": [
+    7.13,
+    46.795,
+    7.205,
+    46.895
+   ],
+   "depth": false,
+   "bytes": 12411
   },
   "at_attersee": {
    "title": "Attersee",
@@ -493,57 +669,6 @@
     47.06,
     8.332,
     47.079
-   ]
-  },
-  "ch_sarnersee": {
-   "title": "Sarnersee",
-   "bbox": [
-    8.185,
-    46.843,
-    8.248,
-    46.893
-   ],
-   "depth": false,
-   "bytes": 8466,
-   "core": [
-    8.185,
-    46.843,
-    8.248,
-    46.893
-   ]
-  },
-  "ch_schiffenensee": {
-   "title": "Schiffenensee",
-   "bbox": [
-    7.136,
-    46.812,
-    7.199,
-    46.888
-   ],
-   "depth": false,
-   "bytes": 8790,
-   "core": [
-    7.136,
-    46.812,
-    7.199,
-    46.888
-   ]
-  },
-  "ch_sempachersee": {
-   "title": "Sempachersee",
-   "bbox": [
-    8.117,
-    47.115,
-    8.196,
-    47.177
-   ],
-   "depth": false,
-   "bytes": 6825,
-   "core": [
-    8.117,
-    47.115,
-    8.196,
-    47.177
    ]
   },
   "ch_zugersee": {

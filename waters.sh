@@ -54,7 +54,7 @@ bathy() {  # swissBATHY3D lake grid (ESRI ASCII, 1 m) into src/bathy/<lake>/
   get $BATHY/swissbathy3d_$1/swissbathy3d_$1_2056_5728.esriasciigrid.zip src/bathy/$1.zip
   mkdir -p src/bathy/$1 && unzip -qjo src/bathy/$1.zip '*.asc' -d src/bathy/$1
 }
-for l in zuerichsee thunersee vierwaldstaettersee; do bathy $l; done
+for l in zuerichsee thunersee vierwaldstaettersee aegerisee hallwilersee brienzersee bielersee murtensee lacdejoux lacleman lagomaggiore bodensee; do bathy $l; done
 
 # slug | OSM name, or key=values for a river stretch (@id=w1,r2 for one lake among others) | bbox w,s,e,n
 # | swissBATHY3D lake and its surface (m a.s.l.) | (unused) | title | core w,s,e,n (where it wins over an
@@ -67,6 +67,22 @@ WATERS=(
   "rhein_schaffhausen|water=river,canal|8.58,47.64,8.88,47.72|||Rhine: Stein am Rhein to Rheinfall|"
   "donau_ulm|water=river,canal|9.90,48.36,10.12,48.43|||Danube: Ulm|"
   "main_frankfurt|water=river,canal|8.52,50.07,8.82,50.14|||Main: Frankfurt|"
+  "sihlsee|@id=a10022333|8.74,47.07,8.83,47.165|||Sihlsee|"
+  "aegerisee|@id=a3353747|8.575,47.09,8.655,47.15|aegerisee 723.9||Ägerisee|"
+  "hallwilersee|@id=a303577978|8.185,47.235,8.245,47.33|hallwilersee 449.0||Hallwilersee|"
+  "brienzersee|@id=a3343235|7.86,46.675,8.07,46.775|brienzersee 563.7||Brienzersee|"
+  "aare_olten_aarburg|water=river,canal,oxbow,harbour|7.84,47.30,7.98,47.38|||Aare: Olten to Aarburg|"
+  "bodensee_untersee|@id=a2313693|8.84,47.63,9.12,47.74|bodensee 395.6||Bodensee: Untersee|"
+  "bielersee|@id=a3721921|7.06,47.025,7.27,47.15|bielersee 429.1||Bielersee|"
+  "murtensee|@id=a797661|7.02,46.895,7.145,46.97|murtensee 429.2||Murtensee|"
+  "lac_de_joux|@id=a780643|6.23,46.60,6.34,46.68|lacdejoux 1004.0||Lac de Joux|"
+  "leman_petit_lac|@id=a665235|6.10,46.18,6.30,46.30|lacleman 372.0||Léman: Petit-Lac|"
+  "leman_haut_lac|@id=a665235|6.69,46.37,6.97,46.52|lacleman 372.0||Léman: Haut-Lac|"
+  "lago_di_lugano|@id=a2685153|8.84,45.89,9.14,46.05|||Lago di Lugano|"
+  "lago_maggiore|@id=a23517|8.62,45.95,8.92,46.20|lagomaggiore 193.5||Lago Maggiore|"
+  "ch_sarnersee|Sarnersee|8.175,46.835,8.26,46.91|||Sarnersee|"
+  "ch_sempachersee|Sempachersee|8.10,47.105,8.20,47.185|||Sempachersee|"
+  "ch_schiffenensee|Schiffenensee|7.13,46.795,7.205,46.895|||Schiffenensee|"
 )
 printf '%s\n' "${WATERS[@]}" > work/hand.txt
 python3 -I survey.py work/hand.txt generated.txt "${survey[@]}"

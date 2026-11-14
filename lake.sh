@@ -38,7 +38,7 @@ x details nwr/man_made=pier,breakwater,groyne nwr/leisure=slipway,marina,bathing
 python3 -I "$S/measure.py" "$W/lake.geojson" "$W/details.geojson" "$name" 1 "$W/water.geojson" | tail -1
 depth=
 if [ -n "$bathy" ]; then
-  SURFACE=$level python3 -I "$S/bathy.py" "$bathy" 5 1 "$W/depth.geojson" | tail -1
+  BBOX=$bbox SURFACE=$level python3 -I "$S/bathy.py" "$bathy" 5 1 "$W/depth.geojson" | tail -1
   depth=$W/depth.geojson
 fi
 python3 -I "$S/build.py" "$slug" "$name" "$W/lake.geojson" "$W/marks.geojson" "$W/water.geojson" $depth

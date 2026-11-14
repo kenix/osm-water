@@ -20,7 +20,7 @@ history are in every clone for ever.
 | `lake.sh` | One water: OSM extract (`osmium-tool`), then the Python steps below |
 | `clip.py` | A river stretch: its `natural=water` polygons clipped to the bbox |
 | `measure.py` | The details on and around the water, by category |
-| `bathy.py` | Depth lines from swissBATHY3D |
+| `bathy.py` | Depth lines from swissBATHY3D; `BBOX` limits it to the tiles around one water's box, so a part of a big lake (Léman) gets its own lines |
 | `build.py` | One water's file |
 | `orient.py` | The orientation layer from Natural Earth |
 | `preview.html` | Both maps side by side, the swisstopo map and these files (serve this directory, open it) |
@@ -31,7 +31,7 @@ Building needs `osmium-tool`, Python 3 (standard library only), `curl` and
 `unzip`: `./waters.sh water-YYYY-MM-DD`, then upload `out/*` to that release.
 The countries are `COUNTRIES` in `waters.sh` (Geofabrik extracts, 7 GB for
 CH, DE, AT, GB and IE; a run takes about an hour). The waters by hand are
-`WATERS` there (a depth grid, a better title, a box cut by hand); every other
+`WATERS` there (a depth grid, a better title, a box cut by hand, a lake whose club sits at the edge of its generated box); every other
 club gets its water from `survey.py`. Clubs on the sea (coastline, not
 `natural=water`) get a strip of sea from `sea.py`; `generated.txt.none` lists
 every club survey.py found no water for, the input of `sea.py`. `ONLY=<slug>`

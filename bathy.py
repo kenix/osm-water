@@ -1,5 +1,6 @@
 """Depth lines from swissBATHY3D ESRI ASCII tiles (LV95, 1 m, heights a.s.l.).
-Usage: python3 -I bathy.py <dir of .asc> <grid step m> <simplify m> [out.geojson]"""
+Usage: python3 -I bathy.py <dir of .asc> <grid step m> <simplify m> [out.geojson]
+BBOX=w,s,e,n (env) reads only the tiles that touch that box, for a part of a big lake."""
 import glob, gzip, json, math, os, sys
 from array import array
 
@@ -7,10 +8,25 @@ LEVELS = (2, 5, 10, 20, 50, 100)
 src, step, tol = sys.argv[1], int(sys.argv[2]), float(sys.argv[3])
 NAN = float('nan')
 
+
+def lv95(e, n):
+    y, x = (e - 2600000) / 1e6, (n - 1200000) / 1e6
+    lng = 2.6779094 + 4.728982 * y + 0.791484 * y * x + 0.1306 * y * x * x - 0.0436 * y ** 3
+    lat = 16.9023892 + 3.238272 * x - 0.270978 * y * y - 0.002528 * x * x - 0.0447 * y * y * x - 0.0140 * x ** 3
+    return [round(lng * 100 / 36, 6), round(lat * 100 / 36, 6)]
+
+
+BBOX = [float(v) for v in os.environ['BBOX'].split(',')] if os.environ.get('BBOX') else None
 tiles = []
 for f in sorted(glob.glob(os.path.join(src, '*.asc'))):
     with open(f) as fh:
         h = {k.lower(): float(v) for k, v in (fh.readline().split() for _ in range(6))}
+    if BBOX:
+        xll, yll, nc, nr = h['xllcorner'], h['yllcorner'], h['ncols'], h['nrows']
+        c = [lv95(xll + dx, yll + dy) for dx in (0, nc) for dy in (0, nr)]
+        if (max(p[0] for p in c) < BBOX[0] or min(p[0] for p in c) > BBOX[2]
+                or max(p[1] for p in c) < BBOX[1] or min(p[1] for p in c) > BBOX[3]):
+            continue
     tiles.append((f, h))
 X0 = min(h['xllcorner'] for _, h in tiles) // step * step
 Y0 = min(h['yllcorner'] for _, h in tiles) // step * step
@@ -41,13 +57,6 @@ print(f"grid {W}x{H} at {step} m, surface {top:.1f} m", file=sys.stderr)
 def at(i, j):
     v = grid[j * W + i]
     return None if v != v else top - v  # depth
-
-
-def lv95(e, n):
-    y, x = (e - 2600000) / 1e6, (n - 1200000) / 1e6
-    lng = 2.6779094 + 4.728982 * y + 0.791484 * y * x + 0.1306 * y * x * x - 0.0436 * y ** 3
-    lat = 16.9023892 + 3.238272 * x - 0.270978 * y * y - 0.002528 * x * x - 0.0447 * y * y * x - 0.0140 * x ** 3
-    return [round(lng * 100 / 36, 6), round(lat * 100 / 36, 6)]
 
 
 def seg_dist(p, a, b):
