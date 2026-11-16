@@ -1,7 +1,7 @@
 {
- "release": "water-2026-11-14",
+ "release": "water-2026-11-16",
  "format": 1,
- "base": "https://github.com/kenix/osm-water/releases/download/water-2026-11-14/",
+ "base": "https://github.com/kenix/osm-water/releases/download/water-2026-11-16/",
  "licence": "ODbL-1.0",
  "attribution": "© OpenStreetMap contributors",
  "orient": {
@@ -262,6 +262,61 @@
    ],
    "depth": false,
    "bytes": 12411
+  },
+  "us_charles": {
+   "title": "Charles River: Watertown to the dam",
+   "bbox": [
+    -71.19,
+    42.34,
+    -71.063,
+    42.38
+   ],
+   "depth": false,
+   "bytes": 26437
+  },
+  "us_schuylkill": {
+   "title": "Schuylkill: Boathouse Row to Manayunk",
+   "bbox": [
+    -75.25,
+    39.96,
+    -75.18,
+    40.05
+   ],
+   "depth": false,
+   "bytes": 28653
+  },
+  "us_lake_merritt": {
+   "title": "Lake Merritt",
+   "bbox": [
+    -122.268,
+    37.795,
+    -122.245,
+    37.815
+   ],
+   "depth": false,
+   "bytes": 3353
+  },
+  "us_lady_bird_lake": {
+   "title": "Lady Bird Lake",
+   "bbox": [
+    -97.795,
+    30.24,
+    -97.705,
+    30.298
+   ],
+   "depth": false,
+   "bytes": 21472
+  },
+  "us_lake_union": {
+   "title": "Lake Union and the Ship Canal",
+   "bbox": [
+    -122.4,
+    47.635,
+    -122.285,
+    47.672
+   ],
+   "depth": false,
+   "bytes": 33446
   },
   "at_attersee": {
    "title": "Attersee",

@@ -13,10 +13,14 @@ BATHY=https://data.geo.admin.ch/ch.swisstopo.swissbathy3d
 get() { [ -s "$2" ] || { mkdir -p "$(dirname "$2")"; curl -sSfL -o "$2" "$1"; }; }
 # Countries: Geofabrik path and the prefix of their generated waters. Each is cut down once to what
 # lake.sh and survey.py read (FILTER is a superset of lake.sh's), and all into src/all.pbf so a border
-# water has both banks.
+# water has both banks. A third word `hand`: only the waters listed by hand below, no survey and no sea
+# (the US states, for the simulated US clubs; ponytail: survey them too when US clubs are real).
 COUNTRIES=(
   "europe/switzerland ch" "europe/germany de" "europe/austria at"
   "europe/great-britain gb" "europe/ireland-and-northern-ireland ie"
+  "north-america/us/massachusetts us_ma hand" "north-america/us/pennsylvania us_pa hand"
+  "north-america/us/california/norcal us_ca hand" "north-america/us/texas us_tx hand"
+  "north-america/us/washington us_wa hand"
 )
 FILTER="nwr/natural=water,cape,peninsula,bay,beach,shoal,reef,wetland n/place=town,city,village,island,islet
   w/place=island,islet r/place=island nwr/amenity=ferry_terminal nwr/sport
@@ -31,6 +35,7 @@ for c in "${COUNTRIES[@]}"; do
   f=src/filtered/$2.pbf
   [ $f -nt src/$(basename $1)-latest.osm.pbf ] || osmium tags-filter src/$(basename $1)-latest.osm.pbf $FILTER -o $f -O
   parts+=($f)
+  [ "${3:-}" = hand ] && continue
   osmium tags-filter $f nwr/sport -o work/survey/$2-clubs.pbf -O
   osmium export work/survey/$2-clubs.pbf -u type_id -f geojsonseq -o work/survey/$2-clubs.geojsonseq -O
   osmium tags-filter $f nwr/natural=water -o work/survey/$2-water.pbf -O
@@ -44,7 +49,8 @@ for c in "${COUNTRIES[@]}"; do
   survey+=($2:work/survey/$2-clubs.geojsonseq:work/survey/$2-water.geojsonseq:work/survey/$2-rivers.geojsonseq)
 done
 # extracts taken on different days hold the same object at two versions; time-filter keeps today's
-[ src/all.pbf -nt ${parts[0]} ] || { osmium merge "${parts[@]}" -o work/merged.pbf -O
+stale=; for p in "${parts[@]}"; do [ src/all.pbf -nt $p ] || stale=1; done
+[ -z "$stale" ] || { osmium merge "${parts[@]}" -o work/merged.pbf -O
   osmium time-filter work/merged.pbf -o src/all.pbf -O; }
 for n in admin_0_boundary_lines_land admin_0_countries populated_places_simple lakes lakes_europe rivers_lake_centerlines rivers_europe; do
   get $NE/ne_10m_$n.geojson src/ne/ne_10m_$n.geojson
@@ -83,6 +89,12 @@ WATERS=(
   "ch_sarnersee|Sarnersee|8.175,46.835,8.26,46.91|||Sarnersee|"
   "ch_sempachersee|Sempachersee|8.10,47.105,8.20,47.185|||Sempachersee|"
   "ch_schiffenensee|Schiffenensee|7.13,46.795,7.205,46.895|||Schiffenensee|"
+  # the simulated US clubs (sim-locations.md 21 to 25)
+  "us_charles|water=river,canal,oxbow,harbour|-71.19,42.34,-71.063,42.38|||Charles River: Watertown to the dam|"
+  "us_schuylkill|water=river,canal,oxbow,harbour;@id=a17681929|-75.25,39.96,-75.18,40.05|||Schuylkill: Boathouse Row to Manayunk|"
+  "us_lake_merritt|@id=a69027|-122.268,37.795,-122.245,37.815|||Lake Merritt|"
+  "us_lady_bird_lake|@id=a65343|-97.795,30.24,-97.705,30.298|||Lady Bird Lake|"
+  "us_lake_union|water=river,canal,oxbow,harbour;@id=a5587627,a5587663,a1369746354|-122.40,47.635,-122.285,47.672|||Lake Union and the Ship Canal|"
 )
 printf '%s\n' "${WATERS[@]}" > work/hand.txt
 python3 -I survey.py work/hand.txt generated.txt "${survey[@]}"

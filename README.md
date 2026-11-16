@@ -30,7 +30,9 @@ history are in every clone for ever.
 Building needs `osmium-tool`, Python 3 (standard library only), `curl` and
 `unzip`: `./waters.sh water-YYYY-MM-DD`, then upload `out/*` to that release.
 The countries are `COUNTRIES` in `waters.sh` (Geofabrik extracts, 7 GB for
-CH, DE, AT, GB and IE; a run takes about an hour). The waters by hand are
+CH, DE, AT, GB and IE; a run takes about an hour), plus five US states
+marked `hand` for the simulated US clubs: only their waters by hand, no
+survey and no sea. The orientation layer stays Europe's. The waters by hand are
 `WATERS` there (a depth grid, a better title, a box cut by hand, a lake whose club sits at the edge of its generated box); every other
 club gets its water from `survey.py`. Clubs on the sea (coastline, not
 `natural=water`) get a strip of sea from `sea.py`; `generated.txt.none` lists
